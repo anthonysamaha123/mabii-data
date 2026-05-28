@@ -24,6 +24,7 @@
     "fetch:bdl": "tsx scripts/connectors/bdl.ts",
     "fetch:mof": "tsx scripts/connectors/mof.ts",
     "fetch:cas": "tsx scripts/connectors/cas.ts",
+    "fetch:places": "tsx scripts/connectors/google-places.ts",
     "schedule:check": "tsx scripts/scheduler/check.ts",
     "schedule:run": "tsx scripts/scheduler/run.ts",
     "schedule:run:force": "tsx scripts/scheduler/run.ts --force",

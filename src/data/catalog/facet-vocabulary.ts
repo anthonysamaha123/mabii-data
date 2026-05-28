@@ -24,6 +24,8 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "topic", facet_value: "governance", label_en: "Governance & institutions", label_ar: "الحوكمة والمؤسسات" },
   { facet_type: "topic", facet_value: "health", label_en: "Health", label_ar: "الصحة" },
   { facet_type: "topic", facet_value: "environment", label_en: "Environment & energy", label_ar: "البيئة والطاقة" },
+  { facet_type: "topic", facet_value: "hospitality", label_en: "Hospitality & food service", label_ar: "الضيافة والمطاعم" },
+  { facet_type: "topic", facet_value: "retail", label_en: "Retail & consumer commerce", label_ar: "التجزئة والتجارة الاستهلاكية" },
 
   // ── subtopic ─────────────────────────────────────────────────────────
   { facet_type: "subtopic", facet_value: "gdp", parent: "macro", label_en: "Gross domestic product", label_ar: "الناتج المحلي الإجمالي" },
@@ -93,6 +95,17 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "co2_emissions", parent: "environment", label_en: "CO2 emissions", label_ar: "انبعاثات ثاني أكسيد الكربون" },
   { facet_type: "subtopic", facet_value: "electricity_access", parent: "environment", label_en: "Electricity access", label_ar: "الوصول إلى الكهرباء" },
   { facet_type: "subtopic", facet_value: "energy_mix", parent: "environment", label_en: "Energy mix", label_ar: "مزيج الطاقة" },
+  // ── Places-derived business categories ───────────────────────────────
+  { facet_type: "subtopic", facet_value: "pharmacy", parent: "health", label_en: "Pharmacies", label_ar: "الصيدليات" },
+  { facet_type: "subtopic", facet_value: "hospital", parent: "health", label_en: "Hospitals & clinics", label_ar: "المستشفيات والعيادات" },
+  { facet_type: "subtopic", facet_value: "bank_branch", parent: "monetary", label_en: "Bank branches", label_ar: "فروع المصارف" },
+  { facet_type: "subtopic", facet_value: "money_exchange", parent: "monetary", label_en: "Money exchange (sarrafa)", label_ar: "صرافة" },
+  { facet_type: "subtopic", facet_value: "restaurant", parent: "hospitality", label_en: "Restaurants", label_ar: "المطاعم" },
+  { facet_type: "subtopic", facet_value: "cafe", parent: "hospitality", label_en: "Cafés", label_ar: "المقاهي" },
+  { facet_type: "subtopic", facet_value: "hotel", parent: "hospitality", label_en: "Hotels & lodging", label_ar: "الفنادق ودور الإقامة" },
+  { facet_type: "subtopic", facet_value: "supermarket", parent: "retail", label_en: "Supermarkets & grocers", label_ar: "السوبرماركت والبقالات" },
+  { facet_type: "subtopic", facet_value: "gas_station", parent: "retail", label_en: "Gas stations", label_ar: "محطات الوقود" },
+  { facet_type: "subtopic", facet_value: "generator_shop", parent: "environment", label_en: "Generator & solar shops", label_ar: "متاجر المولّدات والطاقة الشمسية" },
 
   // ── frequency ────────────────────────────────────────────────────────
   { facet_type: "frequency", facet_value: "daily", label_en: "Daily", label_ar: "يومية" },

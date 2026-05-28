@@ -9,7 +9,10 @@ import {
 import {
   getMultiSourcePivot,
   getObservations,
+  getGeographyBreakdown,
+  countDistinctGeographies,
 } from "@/data/store";
+import { getGeography } from "@/data/catalog/geographies";
 import { facetLabel } from "@/data/catalog/facet-vocabulary";
 import { formatDate, formatNumber, formatPeriod } from "@/lib/format";
 import { TrustBadge } from "@/components/trust-badge";
@@ -40,6 +43,9 @@ export default async function IndicatorDetailPage({ params }: PageProps) {
 
   const pivot = await getMultiSourcePivot(code);
   const allObs = await getObservations(code);
+  const distinctGeos = await countDistinctGeographies(code);
+  const isSubnational = distinctGeos > 1;
+  const geoBreakdown = isSubnational ? await getGeographyBreakdown(code) : [];
 
   const sourcesUsedIds = Array.from(
     new Set(allObs.map((o) => o.source_id))
@@ -137,7 +143,7 @@ export default async function IndicatorDetailPage({ params }: PageProps) {
         </div>
       </header>
 
-      {sparkData.length >= 2 && (
+      {!isSubnational && sparkData.length >= 2 && (
         <section className="mb-10">
           <Sparkline
             data={sparkData}
@@ -160,6 +166,76 @@ export default async function IndicatorDetailPage({ params }: PageProps) {
         </section>
       )}
 
+      {isSubnational && geoBreakdown.length > 0 && (
+        <section className="mb-10">
+          <h2 className="mb-3 text-lg" style={{ fontWeight: 600 }}>
+            {lang === "ar" ? "حسب المحافظة" : "By governorate"}
+          </h2>
+          <div
+            className="overflow-x-auto border"
+            style={{
+              borderColor: "var(--color-rule)",
+              background: "var(--color-bg-elev)",
+            }}
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>{lang === "ar" ? "المحافظة" : "Governorate"}</th>
+                  <th className="num">{dict.indicator.value}</th>
+                  <th>{dict.indicator.period}</th>
+                  <th>{lang === "ar" ? "ملاحظة" : "Note"}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {geoBreakdown.map(({ geography_id, observation }) => {
+                  const geo = getGeography(geography_id);
+                  const censored = (observation.confidence ?? 1) < 0.5;
+                  return (
+                    <tr key={geography_id}>
+                      <td style={{ fontFamily: "var(--font-serif)", fontWeight: 500 }}>
+                        {geo ? (lang === "ar" ? geo.name_ar : geo.name_en) : geography_id}
+                      </td>
+                      <td className="num">
+                        {censored ? "≥" : ""}
+                        {formatNumber(observation.value, observation.unit, lang)}
+                      </td>
+                      <td
+                        style={{
+                          fontFamily: "var(--font-sans)",
+                          color: "var(--color-ink-soft)",
+                          fontSize: 13,
+                        }}
+                      >
+                        {formatPeriod(
+                          observation.period_start,
+                          observation.period_end,
+                          observation.frequency
+                        )}
+                      </td>
+                      <td
+                        style={{
+                          fontFamily: "var(--font-sans)",
+                          color: censored ? "var(--color-flag-stale)" : "var(--color-ink-mute)",
+                          fontSize: 11,
+                        }}
+                      >
+                        {censored
+                          ? lang === "ar"
+                            ? "مقيَّد عند حدّ الواجهة"
+                            : "censored at API cap"
+                          : ""}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {!isSubnational && (
       <section className="mb-10">
         <h2 className="mb-3 text-lg" style={{ fontWeight: 600 }}>
           {dict.indicator.multi_source_table}
@@ -251,6 +327,7 @@ export default async function IndicatorDetailPage({ params }: PageProps) {
           </div>
         )}
       </section>
+      )}
 
       {ind.notes_en && (
         <section className="mb-10">

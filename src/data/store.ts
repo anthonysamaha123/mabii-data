@@ -175,6 +175,43 @@ export async function getLastFetchedMap(): Promise<
   return result;
 }
 
+export interface GeographyBreakdownRow {
+  geography_id: string;
+  observation: Observation;
+}
+
+/**
+ * How many distinct geographies an indicator covers. >1 means it's a
+ * subnational indicator (e.g. Places counts per governorate) and should be
+ * rendered as a by-geography breakdown rather than a time-series pivot.
+ */
+export async function countDistinctGeographies(
+  indicator_code: string
+): Promise<number> {
+  const obs = await getObservations(indicator_code);
+  return new Set(obs.map((o) => o.geography_id)).size;
+}
+
+/**
+ * Latest observation per geography for an indicator (most recent period each).
+ * Sorted by value descending. Used for the by-geography breakdown view.
+ */
+export async function getGeographyBreakdown(
+  indicator_code: string
+): Promise<GeographyBreakdownRow[]> {
+  const obs = await getObservations(indicator_code);
+  const latestByGeo = new Map<string, Observation>();
+  for (const o of obs) {
+    const prior = latestByGeo.get(o.geography_id);
+    if (!prior || o.period_end > prior.period_end) {
+      latestByGeo.set(o.geography_id, o);
+    }
+  }
+  return Array.from(latestByGeo.entries())
+    .map(([geography_id, observation]) => ({ geography_id, observation }))
+    .sort((a, b) => b.observation.value - a.observation.value);
+}
+
 export function clearStoreCache() {
   cache = null;
 }

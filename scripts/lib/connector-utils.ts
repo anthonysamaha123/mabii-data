@@ -149,9 +149,12 @@ export async function mergeObservations(
     // first write
   }
 
-  // Key: (source_id, period_start, period_end). Latest fetched wins on collision.
+  // Key: (source_id, geography_id, period_start, period_end). Latest fetched wins
+  // on collision. geography_id is part of the key because the same indicator can
+  // have observations at multiple geographies in the same period (e.g. Places
+  // counts per governorate).
   const key = (o: Observation) =>
-    `${o.source_id}|${o.period_start}|${o.period_end}`;
+    `${o.source_id}|${o.geography_id}|${o.period_start}|${o.period_end}`;
 
   const map = new Map<string, Observation>();
   for (const o of existing.observations) map.set(key(o), o);
