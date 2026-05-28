@@ -197,6 +197,76 @@ export const indicators: Indicator[] = [
     ],
     primary_source_id: "world-bank-wdi",
   },
+  {
+    code: "mabii.trade.exports_goods_usd",
+    name_en: "Exports of goods (USD)",
+    name_ar: "صادرات السلع (دولار أميركي)",
+    definition_en:
+      "Total annual exports of goods, free-on-board, in current US dollars.",
+    definition_ar:
+      "إجمالي الصادرات السنوية للسلع، فوب، بالدولار الأميركي الجاري.",
+    default_unit: "USD",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "trade" },
+      { facet_type: "subtopic", facet_value: "exports" },
+      { facet_type: "frequency", facet_value: "annual" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "un-comtrade",
+        source_native_code: "X/TOTAL",
+        comparability: "direct",
+        reconciliation_notes:
+          "Sum of all goods (HS=TOTAL), reported by Lebanon to Comtrade. Headline aggregate; per-partner / per-commodity breakdowns deferred to Phase 2.",
+      },
+      {
+        source_id: "world-bank-wdi",
+        source_native_code: "NE.EXP.GNFS.CD",
+        comparability: "after_conversion",
+        reconciliation_notes:
+          "WB series includes services; Comtrade is goods only. Comparable directionally but not 1:1.",
+      },
+    ],
+    primary_source_id: "un-comtrade",
+  },
+  {
+    code: "mabii.trade.imports_goods_usd",
+    name_en: "Imports of goods (USD)",
+    name_ar: "واردات السلع (دولار أميركي)",
+    definition_en:
+      "Total annual imports of goods, cost-insurance-freight, in current US dollars.",
+    definition_ar:
+      "إجمالي الواردات السنوية للسلع، سيف، بالدولار الأميركي الجاري.",
+    default_unit: "USD",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "trade" },
+      { facet_type: "subtopic", facet_value: "imports" },
+      { facet_type: "frequency", facet_value: "annual" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "un-comtrade",
+        source_native_code: "M/TOTAL",
+        comparability: "direct",
+      },
+      {
+        source_id: "world-bank-wdi",
+        source_native_code: "NE.IMP.GNFS.CD",
+        comparability: "after_conversion",
+        reconciliation_notes:
+          "WB series includes services; Comtrade is goods only.",
+      },
+    ],
+    primary_source_id: "un-comtrade",
+  },
 ];
 
 export function getIndicator(code: string): Indicator | undefined {

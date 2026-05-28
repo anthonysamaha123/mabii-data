@@ -14,6 +14,15 @@ interface Entry {
 const entries: Entry[] = [
   {
     date: "2026-05-28",
+    title_en: "v0.2 — Source catalogue expanded; Data Reliability Map shipped",
+    title_ar: "الإصدار 0.2 — توسيع كتالوج المصادر؛ إطلاق خريطة موثوقية البيانات",
+    body_en:
+      "Catalogue grows from 2 to ~35 sources spanning all five tiers (T1 open APIs through T5 digital/social), each with explicit ingestion status: live, scrape-needed, PDF-AI-needed, geospatial-needed, partnership-needed, deferred, or planned. UN Comtrade added as a live connector for goods exports and imports. FRED connector added (optional, requires API key). The Data Reliability Map publishes the full picture as the Phase 1 flagship. Two new indicators (goods exports and imports in USD) mapped across UN Comtrade and the World Bank.",
+    body_ar:
+      "ينمو الكتالوج من مصدرَين إلى نحو 35 مصدراً موزَّعةً على الفئات الخمس (T1 الواجهات البرمجية المفتوحة وحتى T5 الرقمية/الاجتماعية)، مع تصنيف صريح لحالة الإلحاق: حيّ، أو يحتاج كَشطاً، أو استخراجاً بالذكاء، أو معالجة جغرافية، أو شراكة، أو مؤجَّل، أو مخطَّط. أُضيف Comtrade كموصِل حيّ لصادرات وواردات السلع. أُضيف موصِل FRED (اختياري؛ يحتاج مفتاحاً). تنشر «خريطة موثوقية البيانات» الصورة الكاملة كَواجهة المرحلة الأولى. أُضيف مؤشّران جديدان (صادرات وواردات السلع بالدولار) بتطابق بين Comtrade والبنك الدولي.",
+  },
+  {
+    date: "2026-05-28",
     title_en: "v0.1 — Initial publication",
     title_ar: "الإصدار 0.1 — النشر الأولي",
     body_en:

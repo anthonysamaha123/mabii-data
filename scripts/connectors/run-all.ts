@@ -1,7 +1,7 @@
 // Sequential connector runner. Production replaces this with Dagster.
 import { execSync } from "node:child_process";
 
-const connectors = ["world-bank", "imf"];
+const connectors = ["world-bank", "imf", "comtrade", "fred"];
 
 for (const name of connectors) {
   console.log(`\n=== ${name} ===`);

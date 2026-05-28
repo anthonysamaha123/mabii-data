@@ -12,7 +12,9 @@
     "typecheck": "tsc --noEmit",
     "fetch:all": "tsx scripts/connectors/run-all.ts",
     "fetch:wb": "tsx scripts/connectors/world-bank.ts",
-    "fetch:imf": "tsx scripts/connectors/imf.ts"
+    "fetch:imf": "tsx scripts/connectors/imf.ts",
+    "fetch:comtrade": "tsx scripts/connectors/comtrade.ts",
+    "fetch:fred": "tsx scripts/connectors/fred.ts"
   },
   "dependencies": {
     "next": "16.2.3",

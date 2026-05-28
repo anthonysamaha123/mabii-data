@@ -7,6 +7,7 @@ import {
   topicsInUse,
   getSource,
 } from "@/data/queries";
+import { liveSources } from "@/data/catalog/sources";
 import {
   getLastFetchedAtForSource,
   getLatestObservation,
@@ -42,11 +43,14 @@ export default async function HomePage({
   );
 
   const sourceFreshness = await Promise.all(
-    sources.map(async (s) => ({
+    liveSources().map(async (s) => ({
       source: s,
       lastFetched: await getLastFetchedAtForSource(s.id),
     }))
   );
+
+  const totalSources = sources.length;
+  const liveCount = liveSources().length;
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-10">
@@ -181,6 +185,38 @@ export default async function HomePage({
         </div>
       </section>
 
+      <section className="mb-12">
+        <Link
+          href={`/${lang}/sources/reliability-map`}
+          className="block border p-5 no-underline"
+          style={{
+            borderColor: "var(--color-rule)",
+            background: "var(--color-bg-elev)",
+            color: "var(--color-ink)",
+          }}
+        >
+          <div
+            className="mb-1 text-xs uppercase tracking-wider"
+            style={{ color: "var(--color-accent)", letterSpacing: "0.08em", fontFamily: "var(--font-sans)" }}
+          >
+            {lang === "ar" ? "خريطة موثوقية البيانات" : "Data Reliability Map"}
+          </div>
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="text-lg md:text-xl" style={{ fontWeight: 600, lineHeight: 1.35 }}>
+              {lang === "ar"
+                ? "كل مصدر بيانات اقتصادي لبناني نتتبّعه — حيٌّ، مخطَّط، أو مؤجَّل — مع تصنيف صريح للحالة."
+                : "Every Lebanese economic data source we track — live, planned, or deferred — with the honest status spelled out."}
+            </h2>
+            <span
+              className="shrink-0 text-sm"
+              style={{ color: "var(--color-accent)", fontFamily: "var(--font-sans)" }}
+            >
+              {lang === "ar" ? "اعرض ←" : "Open →"}
+            </span>
+          </div>
+        </Link>
+      </section>
+
       <section className="mb-12 grid gap-10 md:grid-cols-2">
         <div>
           <h2 className="mb-3 text-xl" style={{ fontWeight: 600 }}>
@@ -204,9 +240,21 @@ export default async function HomePage({
           </ul>
         </div>
         <div>
-          <h2 className="mb-3 text-xl" style={{ fontWeight: 600 }}>
-            {dict.home.status_heading}
-          </h2>
+          <div className="mb-3 flex items-baseline justify-between gap-2">
+            <h2 className="text-xl" style={{ fontWeight: 600 }}>
+              {dict.home.status_heading}
+            </h2>
+            <Link
+              href={`/${lang}/sources/reliability-map`}
+              className="text-xs no-underline"
+              style={{
+                color: "var(--color-accent)",
+                fontFamily: "var(--font-sans)",
+              }}
+            >
+              {liveCount} / {totalSources} live →
+            </Link>
+          </div>
           <ul
             className="space-y-2 text-sm"
             style={{ fontFamily: "var(--font-sans)" }}

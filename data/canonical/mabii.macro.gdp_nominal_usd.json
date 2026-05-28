@@ -1,6 +1,6 @@
 {
   "indicator_code": "mabii.macro.gdp_nominal_usd",
-  "built_at": "2026-05-28T10:37:32.063Z",
+  "built_at": "2026-05-28T11:42:16.980Z",
   "observations": [
     {
       "indicator_code": "mabii.macro.gdp_nominal_usd",
@@ -158,7 +158,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -189,7 +189,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -220,7 +220,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -251,7 +251,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -282,7 +282,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -313,7 +313,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -344,7 +344,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -375,7 +375,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -406,7 +406,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -437,7 +437,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -468,7 +468,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -499,7 +499,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -530,7 +530,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -561,7 +561,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -592,7 +592,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -623,7 +623,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -654,7 +654,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -685,7 +685,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -716,7 +716,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -747,7 +747,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -778,7 +778,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -809,7 +809,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -840,7 +840,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -871,7 +871,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -902,7 +902,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -933,7 +933,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -964,7 +964,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -995,7 +995,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1026,7 +1026,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1057,7 +1057,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1088,7 +1088,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1119,7 +1119,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1150,7 +1150,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1181,7 +1181,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1212,7 +1212,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {
@@ -1243,7 +1243,7 @@
       "raw_ref": "b099f5e3ba2703460dbde1f658e7824987a35c176c1f56c62729edd0136acd2d",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:35:33.702Z",
+      "fetched_at": "2026-05-28T11:42:05.026Z",
       "version": 1
     },
     {

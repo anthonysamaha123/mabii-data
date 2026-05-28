@@ -31,6 +31,25 @@ export type FacetType =
 
 export type SourceTier = "T1" | "T2" | "T3" | "T4" | "T5";
 
+/**
+ * Honest accounting of where Mabii stands with each source.
+ * "live"                — connector running on schedule, data flowing
+ * "scrape_needed"       — public site but no API; needs scraper + workbench review
+ * "pdf_ai_needed"       — publishes as PDF; needs AI extraction + sample audit
+ * "geospatial_needed"   — raster / satellite; needs GDAL toolchain (Phase 2)
+ * "partnership_needed"  — public-spirited but gated; requires application
+ * "deferred"            — T3 paid sources (deferred per SPEC §4); see substitute_for_id
+ * "planned"             — registered, not yet started
+ */
+export type IngestionStatus =
+  | "live"
+  | "scrape_needed"
+  | "pdf_ai_needed"
+  | "geospatial_needed"
+  | "partnership_needed"
+  | "deferred"
+  | "planned";
+
 export interface Source {
   /** Stable kebab-case code; appears in URLs. */
   id: string;
@@ -49,6 +68,12 @@ export interface Source {
   /** How Mabii ingests this source, one sentence each. */
   ingest_method_en: string;
   ingest_method_ar: string;
+  /** Where we stand on ingesting this source. */
+  ingestion_status: IngestionStatus;
+  /** For T3 (deferred) sources, the free substitute we use instead. */
+  substitute_for_id?: string;
+  /** Optional: the phase of the plan when this source comes online. */
+  planned_phase?: 0 | 1 | 2 | 3 | 4;
 }
 
 export interface Geography {
