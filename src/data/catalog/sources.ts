@@ -296,13 +296,13 @@ export const sources: Source[] = [
     trust_label_default: "official",
     url: "https://www.bdl.gov.lb",
     license: "Public; downloadable PDFs and Excel.",
-    cadence_en: "Weekly balance sheet; monthly monetary survey; daily FX.",
-    cadence_ar: "ميزانية أسبوعية؛ مسح نقدي شهري؛ سعر صرف يومي.",
+    cadence_en: "Bi-monthly balance sheet (15th and end of month); monthly monetary survey; daily FX.",
+    cadence_ar: "ميزانية مرّتين شهرياً (15 ونهاية الشهر)؛ مسح نقدي شهري؛ سعر صرف يومي.",
     ingest_method_en:
-      "Highest-priority T2. Phase-2 build: AI-assisted PDF extraction with human review for the consolidated balance sheet and the monetary survey; FX rates from the daily release.",
+      "Mabii fetches BDL's interim balance sheet Excel from bdl.gov.lb/bdlbalancesheet.php (latest dated XLSX). Rows are matched by label; no AI needed since the file is structured. Five line items extracted as observations.",
     ingest_method_ar:
-      "أعلوية T2. في المرحلة الثانية: استخراج مساعَد بالذكاء الاصطناعي مع مراجعة بشرية للميزانية الموحَّدة والمسح النقدي؛ وأسعار الصرف من الإصدار اليومي.",
-    ingestion_status: "pdf_ai_needed",
+      "تسحب مَبني الميزانية المؤقّتة لمصرف لبنان بصيغة Excel من صفحة bdlbalancesheet.php (أحدث XLSX مؤرَّخ). تُطابَق الصفوف بالعناوين؛ لا حاجة للذكاء الاصطناعي لأن الملف مُهَيكَل. تُستخرَج خمسة بنود.",
+    ingestion_status: "live",
     planned_phase: 2,
   },
   {
@@ -332,14 +332,14 @@ export const sources: Source[] = [
     publisher_ar: "وزارة المالية — الجمهورية اللبنانية",
     tier: "T2",
     trust_label_default: "official",
-    url: "http://www.finance.gov.lb",
+    url: "https://www.finance.gov.lb/en-us/Finance/PublicDebt/DebtReports/",
     license: "Public; PDFs.",
-    cadence_en: "Quarterly fiscal performance; periodic debt bulletins.",
-    cadence_ar: "أداء مالي ربعي؛ نشرات دورية للدين العام.",
+    cadence_en: "Quarterly 'Debt & Debt Markets' report. Publication paused after Q4 2022 during the crisis.",
+    cadence_ar: "تقرير 'الدين العام وأسواقه' الفصلي. تَوَقَّف النشر بعد الربع الرابع من 2022 خلال الأزمة.",
     ingest_method_en:
-      "Phase-2 build: fiscal balance, revenue, expenditure, and gross public debt from quarterly fiscal-performance PDFs.",
+      "Connector built (scripts/connectors/mof.ts) using the AI extractor (gpt-4o-mini) on the Q4 2022 'Debt & Debt Markets' PDF. First end-to-end run succeeded but the extracted LBP figure was off by ~3 orders of magnitude — likely a units misread (trillions vs billions). Per SPEC §1.5 the source stays `pdf_ai_needed` until prompt tuning + sample audit pass.",
     ingest_method_ar:
-      "في المرحلة الثانية: الرصيد المالي والإيرادات والنفقات وإجمالي الدين العام من تقارير الأداء المالي الربعية (PDF).",
+      "المُوصِل جاهز (scripts/connectors/mof.ts) ويستعمل المُستخرِج بالذكاء الاصطناعي على تقرير الربع الرابع 2022. أوّل تشغيل نجح من حيث الأنابيب لكن الرقم المُستخرَج بالليرة كان مغلوطاً بنحو 3 مراتب — على الأرجح خطأ بالوحدة. ابقاء الحالة 'pdf_ai_needed' حتى ضبط الصياغة وتدقيق العيّنات.",
     ingestion_status: "pdf_ai_needed",
     planned_phase: 2,
   },

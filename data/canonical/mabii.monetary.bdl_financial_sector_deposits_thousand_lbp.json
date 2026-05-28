@@ -1,0 +1,22 @@
+{
+  "indicator_code": "mabii.monetary.bdl_financial_sector_deposits_thousand_lbp",
+  "built_at": "2026-05-28T15:43:56.383Z",
+  "observations": [
+    {
+      "indicator_code": "mabii.monetary.bdl_financial_sector_deposits_thousand_lbp",
+      "geography_id": "LBN",
+      "period_start": "2026-05-01",
+      "period_end": "2026-05-31",
+      "frequency": "monthly",
+      "value": 7252398863666,
+      "unit": "thousand_lbp",
+      "source_id": "bdl",
+      "raw_ref": "bab67232fb06c4106bddfb7148e0b0c6324c3e1fd6f7ada24c7b71bcf0c7a583",
+      "trust_label": "official",
+      "extraction_method": "scrape",
+      "method_note": "Matched label: \"Financial Sector Deposits\"",
+      "fetched_at": "2026-05-28T15:43:54.668Z",
+      "version": 1
+    }
+  ]
+}

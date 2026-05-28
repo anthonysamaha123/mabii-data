@@ -1309,6 +1309,193 @@ export const indicators: Indicator[] = [
     ],
   },
 
+  // ─── BDL (Banque du Liban) balance sheet ─────────────────────────────
+  // Values are in thousands of LBP at BDL's reporting conventions.
+  // Released twice monthly (around the 15th and end of month).
+  {
+    code: "mabii.monetary.bdl_gold_thousand_lbp",
+    name_en: "BDL — Gold reserves (thousand LBP)",
+    name_ar: "مصرف لبنان — احتياطي الذهب (آلاف الليرات اللبنانية)",
+    definition_en: "Gold holdings as reported on BDL's interim balance sheet, in thousands of Lebanese pounds.",
+    definition_ar: "حيازات الذهب كما ترد في الميزانية المؤقّتة لمصرف لبنان، بآلاف الليرات اللبنانية.",
+    default_unit: "thousand_lbp",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "monetary" },
+      { facet_type: "subtopic", facet_value: "reserves" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "bdl",
+        source_native_code: "balancesheet.gold",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 15, grace_days: 10 },
+      },
+    ],
+  },
+  {
+    code: "mabii.monetary.bdl_foreign_reserve_assets_thousand_lbp",
+    name_en: "BDL — Foreign reserve assets (thousand LBP)",
+    name_ar: "مصرف لبنان — الأصول الاحتياطية الأجنبية (آلاف الليرات)",
+    definition_en: "Foreign reserve assets on BDL's interim balance sheet.",
+    definition_ar: "الأصول الاحتياطية الأجنبية في الميزانية المؤقّتة لمصرف لبنان.",
+    default_unit: "thousand_lbp",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "monetary" },
+      { facet_type: "subtopic", facet_value: "reserves" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "bdl",
+        source_native_code: "balancesheet.foreign_reserve_assets",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 15, grace_days: 10 },
+      },
+    ],
+  },
+  {
+    code: "mabii.monetary.bdl_currency_in_circulation_thousand_lbp",
+    name_en: "BDL — Currency in circulation outside BDL (thousand LBP)",
+    name_ar: "مصرف لبنان — العملة المتداولة خارج المصرف (آلاف الليرات)",
+    definition_en: "Lebanese pound currency in circulation outside the BDL on the interim balance sheet.",
+    definition_ar: "النقد المتداول بالليرة خارج مصرف لبنان حسب الميزانية المؤقّتة.",
+    default_unit: "thousand_lbp",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "monetary" },
+      { facet_type: "subtopic", facet_value: "money_supply" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "bdl",
+        source_native_code: "balancesheet.currency_in_circulation",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 15, grace_days: 10 },
+      },
+    ],
+  },
+  {
+    code: "mabii.monetary.bdl_financial_sector_deposits_thousand_lbp",
+    name_en: "BDL — Financial-sector deposits at BDL (thousand LBP)",
+    name_ar: "مصرف لبنان — ودائع القطاع المالي لدى المصرف (آلاف الليرات)",
+    definition_en: "Deposits of commercial banks and other financial institutions at the BDL.",
+    definition_ar: "ودائع المصارف التجارية والمؤسسات المالية لدى مصرف لبنان.",
+    default_unit: "thousand_lbp",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "monetary" },
+      { facet_type: "subtopic", facet_value: "bank_deposits" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "bdl",
+        source_native_code: "balancesheet.financial_sector_deposits",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 15, grace_days: 10 },
+      },
+    ],
+  },
+  {
+    code: "mabii.monetary.bdl_public_sector_deposits_thousand_lbp",
+    name_en: "BDL — Public-sector deposits at BDL (thousand LBP)",
+    name_ar: "مصرف لبنان — ودائع القطاع العام لدى المصرف (آلاف الليرات)",
+    definition_en: "Deposits of the Lebanese government and other public-sector entities at the BDL.",
+    definition_ar: "ودائع الحكومة اللبنانية وجهات القطاع العام لدى مصرف لبنان.",
+    default_unit: "thousand_lbp",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "monetary" },
+      { facet_type: "subtopic", facet_value: "bank_deposits" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "bdl",
+        source_native_code: "balancesheet.public_sector_deposits",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 15, grace_days: 10 },
+      },
+    ],
+  },
+
+  // ─── Lebanese Ministry of Finance — Public Debt ──────────────────────
+  {
+    code: "mabii.fiscal.gross_public_debt_lbp",
+    name_en: "Gross public debt — Ministry of Finance (LBP bn)",
+    name_ar: "إجمالي الدين العام — وزارة المالية (مليارات الليرات)",
+    definition_en:
+      "Gross public debt as reported by the Lebanese Ministry of Finance in 'Debt & Debt Markets' quarterly. Includes domestic-currency and foreign-currency components.",
+    definition_ar:
+      "إجمالي الدين العام كما تنشره وزارة المالية اللبنانية في تقرير 'الدين العام وأسواقه' الفصلي. يشمل المكوّن بالعملة المحلية والمكوّن بالعملة الأجنبية.",
+    default_unit: "lbp_bn",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "fiscal" },
+      { facet_type: "subtopic", facet_value: "debt" },
+      { facet_type: "frequency", facet_value: "quarterly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "mof",
+        source_native_code: "debt_report.gross_public_debt_lbp_bn",
+        comparability: "direct",
+        schedule: { cadence: "quarterly", grace_days: 60 },
+      },
+    ],
+    notes_en: "AI-extracted from the MoF quarterly PDF; trust label remains 'official' because the source itself is the publisher. Sample-audited.",
+    notes_ar: "مُستخرَج بالذكاء الاصطناعي من تقرير وزارة المالية الفصلي؛ يبقى تصنيف الثقة 'رسمي' لأن المصدر نفسه هو الناشر. خاضع لتدقيق العيّنات.",
+  },
+  {
+    code: "mabii.fiscal.gross_public_debt_usd",
+    name_en: "Gross public debt — Ministry of Finance (USD bn)",
+    name_ar: "إجمالي الدين العام — وزارة المالية (مليارات الدولارات)",
+    definition_en:
+      "Gross public debt converted to USD at MoF's reported FX. AI-extracted from the quarterly debt report.",
+    definition_ar:
+      "إجمالي الدين العام محوَّلاً إلى الدولار بسعر الصرف المُعتمَد لدى الوزارة. مُستخرَج بالذكاء الاصطناعي من التقرير الفصلي.",
+    default_unit: "usd_bn",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "fiscal" },
+      { facet_type: "subtopic", facet_value: "debt" },
+      { facet_type: "frequency", facet_value: "quarterly" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "mof",
+        source_native_code: "debt_report.gross_public_debt_usd_bn",
+        comparability: "direct",
+        schedule: { cadence: "quarterly", grace_days: 60 },
+      },
+    ],
+  },
+
   // ─── Sanctions (OFAC) ────────────────────────────────────────────────
   {
     code: "mabii.governance.ofac_hizballah_count",

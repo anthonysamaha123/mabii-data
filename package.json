@@ -21,6 +21,8 @@
     "fetch:ilostat": "tsx scripts/connectors/ilostat.ts",
     "fetch:ofac": "tsx scripts/connectors/ofac.ts",
     "fetch:ratings": "tsx scripts/connectors/ratings.ts",
+    "fetch:bdl": "tsx scripts/connectors/bdl.ts",
+    "fetch:mof": "tsx scripts/connectors/mof.ts",
     "schedule:check": "tsx scripts/scheduler/check.ts",
     "schedule:run": "tsx scripts/scheduler/run.ts",
     "schedule:run:force": "tsx scripts/scheduler/run.ts --force",
@@ -35,6 +37,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "server-only": "^0.0.1",
+    "xlsx": "^0.18.5",
     "zod": "^4.3.6"
   },
   "devDependencies": {
