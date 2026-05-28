@@ -103,10 +103,48 @@ export const sources: Source[] = [
     cadence_en: "Annual aggregates; monthly snapshots also available.",
     cadence_ar: "تجميعات سنوية؛ تتوفّر أيضاً لقطات شهرية.",
     ingest_method_en:
-      "Connector scaffolded (scripts/connectors/hdx.ts) but UNHCR's public population endpoint currently returns a ZIP file rather than JSON, and the JSON endpoint requires undocumented query params. Status stays `planned` until the right endpoint is verified and a sample audit lands.",
+      "Mabii pulls UNHCR's published ZIP archive (population.csv) and aggregates refugees across countries of origin for Lebanon as country of asylum. Stored annually.",
     ingest_method_ar:
-      "الموصِل قيد التطوير (scripts/connectors/hdx.ts) لكنّ واجهة UNHCR العامة تُعيد ملفّ ZIP بدل JSON، وواجهة JSON تتطلّب وسائط غير موثَّقة. تبقى الحالة ‘مخطَّط’ حتى التحقّق من النقطة الصحيحة وتدقيق العيّنات.",
+      "تسحب مَبني أرشيف ZIP المنشور من UNHCR (population.csv) وتجمع اللاجئين عبر بلدان المنشأ لكون لبنان بلد اللجوء. تُخزَّن سنوياً.",
+    ingestion_status: "live",
+    planned_phase: 1,
+  },
+  {
+    id: "us-ofac",
+    name_en: "US Treasury — OFAC Sanctions",
+    name_ar: "وزارة الخزانة الأميركية — عقوبات OFAC",
+    publisher_en: "Office of Foreign Assets Control, US Treasury",
+    publisher_ar: "مكتب مراقبة الأصول الأجنبية، وزارة الخزانة الأميركية",
+    tier: "T4",
+    trust_label_default: "official",
+    url: "https://sanctionslistservice.ofac.treas.gov",
+    license: "US public domain.",
+    cadence_en: "Updated as designations change; Mabii snapshots annually.",
+    cadence_ar: "تُحدَّث عند تغيّر القرارات؛ تأخذ مَبني لقطة سنوية.",
+    ingest_method_en:
+      "Connector built (scripts/connectors/ofac.ts) and parses SDN.XML correctly, but OFAC's S3 redirect target (us-gov-west-1) is unreachable from non-US networks. Will go live once we run from GitHub Actions (US region).",
+    ingest_method_ar:
+      "المُوصِل جاهز (scripts/connectors/ofac.ts) ويُحلّل SDN.XML بشكل صحيح، لكن وجهة إعادة التوجيه على S3 (us-gov-west-1) غير متاحة من شبكات خارج الولايات المتحدة. يُفعَّل عند التشغيل من GitHub Actions.",
     ingestion_status: "planned",
+    planned_phase: 1,
+  },
+  {
+    id: "sovereign-ratings",
+    name_en: "Sovereign credit ratings — public rating actions",
+    name_ar: "تصنيف الائتمان السيادي — إجراءات التصنيف العلنية",
+    publisher_en: "S&P Global, Moody's, Fitch (public press releases)",
+    publisher_ar: "S&P Global، Moody's، Fitch (بيانات صحفية علنية)",
+    tier: "T3",
+    trust_label_default: "official",
+    url: "https://disclosure.spglobal.com/sri/",
+    license: "Each agency's press releases are publicly accessible; ratings remain copyrighted.",
+    cadence_en: "Irregular — when an agency takes a rating action.",
+    cadence_ar: "غير منتظمة — عند اتخاذ كل وكالة إجراءً.",
+    ingest_method_en:
+      "Mabii maintains a small static dataset of historical Lebanon sovereign-rating actions hand-curated from the three agencies' public press releases. New entries added as actions are announced. Free substitute for the paid T3 ratings feeds.",
+    ingest_method_ar:
+      "تحتفظ مَبني بمجموعة بيانات صغيرة وثابتة عن إجراءات تصنيف لبنان السيادية المستخلَصة يدوياً من البيانات الصحفية العلنية للوكالات الثلاث. تُضاف الإدخالات الجديدة فور الإعلان. بديل مجاني عن خدمات T3 المدفوعة.",
+    ingestion_status: "live",
     planned_phase: 1,
   },
   {

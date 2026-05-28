@@ -1309,6 +1309,127 @@ export const indicators: Indicator[] = [
     ],
   },
 
+  // ─── Sanctions (OFAC) ────────────────────────────────────────────────
+  {
+    code: "mabii.governance.ofac_hizballah_count",
+    name_en: "OFAC SDN entries — Hizballah program (count)",
+    name_ar: "إدخالات OFAC على لائحة SDN — برنامج حزب الله (عدد)",
+    definition_en:
+      "Count of entries on the US OFAC SDN list whose program list includes 'HIZBALLAH'. Snapshot taken at fetch time; one observation per year.",
+    definition_ar:
+      "عدد الإدخالات في لائحة OFAC SDN الأميركية التي يتضمّن برنامجها 'HIZBALLAH'. تُلتقط اللقطة عند السحب؛ ملاحظة واحدة في السنة.",
+    default_unit: "count",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "governance" },
+      { facet_type: "subtopic", facet_value: "corruption" },
+      { facet_type: "frequency", facet_value: "annual" },
+      { facet_type: "currency_basis", facet_value: "count" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "us-ofac",
+        source_native_code: "sdn.programList.HIZBALLAH",
+        comparability: "direct",
+        schedule: {
+          cadence: "annual",
+          release_month_of_year: 12,
+          release_day_of_month: 15,
+          grace_days: 60,
+          notes: "OFAC updates SDN whenever designations change; Mabii captures the end-of-year count.",
+        },
+      },
+    ],
+  },
+  {
+    code: "mabii.governance.ofac_lebanon_count",
+    name_en: "OFAC SDN entries — Lebanon program (count)",
+    name_ar: "إدخالات OFAC على لائحة SDN — برنامج لبنان (عدد)",
+    definition_en:
+      "Count of entries on the US OFAC SDN list whose program list includes 'LEBANON'.",
+    definition_ar:
+      "عدد الإدخالات في لائحة OFAC SDN الأميركية التي يتضمّن برنامجها 'LEBANON'.",
+    default_unit: "count",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "governance" },
+      { facet_type: "subtopic", facet_value: "corruption" },
+      { facet_type: "frequency", facet_value: "annual" },
+      { facet_type: "currency_basis", facet_value: "count" },
+      { facet_type: "geography_level", facet_value: "country" },
+      { facet_type: "stock_or_flow", facet_value: "stock" },
+    ],
+    sources: [
+      {
+        source_id: "us-ofac",
+        source_native_code: "sdn.programList.LEBANON",
+        comparability: "direct",
+        schedule: {
+          cadence: "annual",
+          release_month_of_year: 12,
+          release_day_of_month: 15,
+          grace_days: 60,
+        },
+      },
+    ],
+  },
+
+  // ─── Sovereign ratings (manually curated, hardcoded history) ─────────
+  {
+    code: "mabii.governance.sp_sovereign_rating",
+    name_en: "S&P sovereign credit rating (Lebanon, long-term foreign currency)",
+    name_ar: "تصنيف الائتمان السيادي لدى S&P (لبنان، عملة أجنبية طويلة الأجل)",
+    definition_en:
+      "S&P Global long-term foreign-currency sovereign credit rating for Lebanon, mapped to a numeric ladder (1 = D/SD, 22 = AAA). Hand-curated from public rating-action press releases.",
+    definition_ar:
+      "تصنيف S&P Global الائتماني السيادي للبنان بالعملة الأجنبية وللأجل الطويل، مُسقَطاً على سلّم رقمي (1 = D/SD، 22 = AAA). جُمع يدوياً من البيانات الصحفية العلنية.",
+    default_unit: "rating_step",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "governance" },
+      { facet_type: "subtopic", facet_value: "rule_of_law" },
+      { facet_type: "frequency", facet_value: "annual" },
+      { facet_type: "currency_basis", facet_value: "index" },
+      { facet_type: "geography_level", facet_value: "country" },
+    ],
+    sources: [
+      {
+        source_id: "sovereign-ratings",
+        source_native_code: "sp.lebanon.lt_fc",
+        comparability: "direct",
+      },
+    ],
+    notes_en: "Ladder: SD/D=1, CC=2, CCC−=3, CCC=4, CCC+=5, B−=6, B=7, B+=8, BB−=9, BB=10, BB+=11, BBB−=12, BBB=13, BBB+=14, A−=15, A=16, A+=17, AA−=18, AA=19, AA+=20, AAA−=21, AAA=22.",
+    notes_ar: "السلّم: SD/D=1، CC=2، CCC−=3، CCC=4، CCC+=5، B−=6، B=7، B+=8، BB−=9، BB=10، BB+=11، BBB−=12، BBB=13، BBB+=14، A−=15، A=16، A+=17، AA−=18، AA=19، AA+=20، AAA−=21، AAA=22.",
+  },
+  {
+    code: "mabii.governance.moodys_sovereign_rating",
+    name_en: "Moody's sovereign credit rating (Lebanon, long-term foreign currency)",
+    name_ar: "تصنيف الائتمان السيادي لدى Moody's (لبنان، عملة أجنبية طويلة الأجل)",
+    definition_en:
+      "Moody's long-term foreign-currency sovereign credit rating for Lebanon, mapped to a numeric ladder (1 = C, 22 = Aaa). Hand-curated from public rating-action press releases.",
+    definition_ar:
+      "تصنيف Moody's الائتماني السيادي للبنان بالعملة الأجنبية وللأجل الطويل، مُسقَطاً على سلّم رقمي (1 = C، 22 = Aaa).",
+    default_unit: "rating_step",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "governance" },
+      { facet_type: "subtopic", facet_value: "rule_of_law" },
+      { facet_type: "frequency", facet_value: "annual" },
+      { facet_type: "currency_basis", facet_value: "index" },
+      { facet_type: "geography_level", facet_value: "country" },
+    ],
+    sources: [
+      {
+        source_id: "sovereign-ratings",
+        source_native_code: "moodys.lebanon.lt_fc",
+        comparability: "direct",
+      },
+    ],
+  },
+
   // ─── Humanitarian ────────────────────────────────────────────────────
   {
     code: "mabii.humanitarian.registered_refugees",

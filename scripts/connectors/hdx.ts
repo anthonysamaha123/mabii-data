@@ -1,10 +1,14 @@
 // UNHCR Refugee Data Finder connector (registered as source `hdx`).
-// Deterministic JSON API — no AI.
-// Endpoint: https://api.unhcr.org/population/v1/population/?coa=LBN&yearFrom=2000&yearTo={current}
+// Deterministic — no AI.
+//
+// The public population endpoint returns a ZIP containing population.csv and
+// footnotes.csv. We fetch the ZIP, unzip in memory, parse the CSV, and
+// aggregate refugees across countries of origin (coo) for Lebanon as country
+// of asylum (coa=LBN).
 
+import { unzipSync, strFromU8 } from "fflate";
 import {
   annualPeriod,
-  fetchJson,
   isoDate,
   logConnectorRun,
   mergeObservations,
@@ -19,38 +23,62 @@ import type { Observation } from "../../src/data/types";
 const SOURCE_ID = "hdx";
 const COUNTRY_ISO3 = "LBN";
 
-interface UnhcrItem {
-  year: string;
-  coo: string | null;
-  coa: string;
-  refugees: string | number | null;
-}
-
-interface UnhcrResponse {
-  items: UnhcrItem[];
-}
-
-/** Fetch UNHCR aggregated refugee population for Lebanon as country of asylum. */
-async function pullRefugees(): Promise<Array<{ year: number; value: number }>> {
+async function downloadZip(): Promise<Uint8Array> {
   const currentYear = new Date().getUTCFullYear();
-  const url = `https://api.unhcr.org/population/v1/population/?coa=${COUNTRY_ISO3}&yearFrom=2000&yearTo=${currentYear}&download=false`;
-  const data = (await fetchJson(url, { timeoutMs: 45_000 })) as UnhcrResponse;
-  if (!data?.items?.length) {
-    throw new Error(`UNHCR returned no items for ${COUNTRY_ISO3}`);
+  // Counter-intuitively, the UNHCR API returns empty CSVs when filtered by
+  // coa=LBN alone. The combination coa_all=true&residence_country=LBN
+  // returns the full global table including Lebanon-as-asylum rows; we
+  // filter client-side.
+  const url = `https://api.unhcr.org/population/v1/population/?yearFrom=2000&yearTo=${currentYear}&download=true&coa_all=true&residence_country=${COUNTRY_ISO3}`;
+  const res = await fetch(url, {
+    signal: AbortSignal.timeout(60_000),
+    headers: {
+      "user-agent": "Mabii/0.1 (https://mabii.org; contact: hello@mabii.org)",
+      accept: "application/zip,application/octet-stream",
+    },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+  const ab = await res.arrayBuffer();
+  return new Uint8Array(ab);
+}
+
+// Column indices in UNHCR population.csv (stable):
+//   0=Year, 1=Country of origin (name), 2=Country of origin (ISO),
+//   3=Country of asylum (name), 4=Country of asylum (ISO),
+//   5=Refugees under UNHCR's mandate
+function parsePopulationCsv(csv: string): Array<{ year: number; value: number }> {
+  const lines = csv.split(/\r?\n/).filter((l) => l.length > 0);
+  if (lines.length < 2) return [];
+
+  // Aggregate rows have coo_iso === "-" — those are sums across origins.
+  const rows: Array<{ year: number; value: number }> = [];
+  for (let i = 1; i < lines.length; i += 1) {
+    const cols = lines[i].split(",");
+    if (cols.length < 6) continue;
+    if (cols[4]?.trim() !== COUNTRY_ISO3) continue;
+    if (cols[2]?.trim() !== "-") continue; // we want the aggregate-origin row
+    const year = Number.parseInt(cols[0], 10);
+    const value = Number.parseInt(cols[5], 10);
+    if (!Number.isFinite(year) || !Number.isFinite(value)) continue;
+    rows.push({ year, value });
   }
-  // Aggregate per year (sum across countries of origin)
-  const byYear = new Map<number, number>();
-  for (const row of data.items) {
-    const yr = Number.parseInt(row.year, 10);
-    if (!Number.isFinite(yr)) continue;
-    const raw = typeof row.refugees === "string" ? Number.parseInt(row.refugees, 10) : row.refugees;
-    if (raw === null || !Number.isFinite(raw)) continue;
-    byYear.set(yr, (byYear.get(yr) ?? 0) + raw);
+  return rows.sort((a, b) => a.year - b.year);
+}
+
+async function pullRefugees(): Promise<{
+  rows: Array<{ year: number; value: number }>;
+  csvText: string;
+}> {
+  const zipBytes = await downloadZip();
+  const entries = unzipSync(zipBytes);
+  const popKey = Object.keys(entries).find((k) => /population\.csv$/i.test(k));
+  if (!popKey) {
+    throw new Error(
+      `population.csv not found in ZIP; entries: ${Object.keys(entries).join(", ")}`
+    );
   }
-  return Array.from(byYear.entries())
-    .map(([year, value]) => ({ year, value }))
-    .filter((r) => r.value > 0)
-    .sort((a, b) => a.year - b.year);
+  const csvText = strFromU8(entries[popKey]);
+  return { rows: parsePopulationCsv(csvText), csvText };
 }
 
 async function run() {
@@ -66,16 +94,20 @@ async function run() {
     if (mapping.source_native_code !== "unhcr.population.refugees") continue;
 
     console.log(`[hdx] fetching ${ind.code} (${mapping.source_native_code})`);
-    let rows: Array<{ year: number; value: number }>;
+    let payload: { rows: Array<{ year: number; value: number }>; csvText: string };
     try {
-      rows = await pullRefugees();
+      payload = await pullRefugees();
     } catch (err) {
       console.error(`[hdx] failed ${ind.code}:`, err);
       continue;
     }
+    if (payload.rows.length === 0) {
+      console.warn(`[hdx] empty data for ${ind.code}`);
+      continue;
+    }
 
-    const raw = await writeRaw(SOURCE_ID, rows, "refugees.json");
-    const observations: Observation[] = rows.map((r) => {
+    const raw = await writeRaw(SOURCE_ID, payload.csvText, "population.csv");
+    const observations: Observation[] = payload.rows.map((r) => {
       const { period_start, period_end } = annualPeriod(r.year);
       return {
         indicator_code: ind.code,
