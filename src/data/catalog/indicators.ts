@@ -40,21 +40,6 @@ const comtradeAnnualSchedule: Schedule = {
     "UN Comtrade annual aggregates for Lebanon are typically complete by mid-year of the following year. 90-day grace.",
 };
 
-const olxRentSchedule: Schedule = {
-  cadence: "monthly",
-  release_day_of_month: 1, // Mabii publishes the median at the start of each month
-  grace_days: 7,
-  notes:
-    "Mabii-originated: scraped daily, aggregated to a monthly median published on the 1st. 7-day grace.",
-};
-
-const olxCarSchedule: Schedule = {
-  cadence: "weekly",
-  grace_days: 3,
-  notes:
-    "Mabii-originated: scraped daily, aggregated to a weekly median. 3-day grace.",
-};
-
 const placesMonthlySchedule: Schedule = {
   cadence: "monthly",
   release_day_of_month: 1,
@@ -2287,47 +2272,81 @@ export const indicators: Indicator[] = [
   },
 
   {
-    code: "mabii.real_estate.rent_median_lbp_per_district",
-    name_en: "Residential rent — median asking price by district (planned)",
-    name_ar: "الإيجار السكني — وسطاء الأسعار المطلوبة حسب القضاء (مخطَّط)",
+    code: "mabii.real_estate.rent_median_usd",
+    name_en: "Residential rent — median asking price (USD/month)",
+    name_ar: "الإيجار السكني — وسيط السعر المطلوب (دولار/شهر)",
     definition_en:
-      "Planned originated indicator. Monthly median asking rent for residential listings on Lebanese classifieds, broken down by district. Mabii will publish the median, sample size, and last-updated per district — never the raw listings. Methodology paper to accompany first release.",
+      "Median monthly asking rent for apartments and villas listed on OLX Lebanon, by governorate. Mabii publishes the weekly median + sample size per governorate — never the raw listings. Outlier-trimmed (P5–P95). No official source publishes Lebanese rent statistics; this is a Mabii-originated indicator.",
     definition_ar:
-      "مؤشر مخطَّط من إنتاج مَبني. الوسيط الشهري للإيجار السكني المطلوب على الإعلانات المبوَّبة اللبنانية، مفصَّلاً حسب القضاء. ستنشر مَبني الوسيط وحجم العيّنة وتاريخ آخر تحديث لكل قضاء — لا الإعلانات الخام. تُرافِق وثيقة منهجية أول إصدار.",
+      "وسيط الإيجار الشهري المطلوب للشقق والفلل المعروضة على OLX لبنان، حسب المحافظة. تنشر مَبني الوسيط الأسبوعي وحجم العيّنة لكل محافظة — لا الإعلانات الخام. مُشذَّب من القيم الشاذّة. لا مصدر رسمي ينشر إحصاءات الإيجار؛ هذا مؤشر من إنتاج مَبني.",
     default_unit: "USD",
     geography_id: "LBN",
     facets: [
       { facet_type: "topic", facet_value: "real_estate" },
       { facet_type: "subtopic", facet_value: "rent" },
-      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "frequency", facet_value: "weekly" },
       { facet_type: "currency_basis", facet_value: "usd" },
-      { facet_type: "geography_level", facet_value: "district" },
+      { facet_type: "geography_level", facet_value: "governorate" },
       { facet_type: "stock_or_flow", facet_value: "flow" },
     ],
     sources: [
       {
         source_id: "olx-lebanon",
-        source_native_code: "listings.real_estate.rent",
+        source_native_code: "listings.properties.rent",
         comparability: "direct",
         reconciliation_notes:
-          "Scraped daily; aggregated to monthly median per district. Outlier-trimmed (P5–P95). Sample size and last-updated visible on every cell.",
-        schedule: olxRentSchedule,
+          "Server-rendered listing cards parsed weekly; median per governorate, outlier-trimmed P5–P95. Sample size on every value.",
+        schedule: { cadence: "weekly", grace_days: 4 },
       },
     ],
     primary_source_id: "olx-lebanon",
     notes_en:
-      "Planned for Phase 3. No official source publishes Lebanese rent statistics; this is one of Mabii's flagship originated indicators. Trust label will be 'modeled'; methodology published with first release.",
+      "Asking prices (what landlords list), not transaction prices. Trust label 'modeled'. Coverage skews to Beirut + Mount Lebanon where OLX listings concentrate.",
     notes_ar:
-      "مخطَّط للمرحلة الثالثة. لا يوجد مصدر رسمي ينشر إحصاءات الإيجار في لبنان؛ يُعدّ هذا أحد أهمّ مؤشرات مَبني الأصلية. تصنيف الثقة ‘نموذجي’؛ وتُنشَر المنهجية مع أول إصدار.",
+      "أسعار مطلوبة (ما يعرضه المالكون) لا أسعار معاملات فعلية. تصنيف الثقة ‘نموذجي’. التغطية تميل إلى بيروت وجبل لبنان حيث تتركّز الإعلانات.",
   },
   {
-    code: "mabii.transport.used_car_median_price_by_model",
-    name_en: "Used cars — median asking price by make, model, and year (planned)",
-    name_ar: "السيارات المستعملة — وسطاء الأسعار المطلوبة حسب الماركة والموديل والسنة (مخطَّط)",
+    code: "mabii.real_estate.sale_price_median_usd",
+    name_en: "Apartment sale price — median asking price (USD)",
+    name_ar: "سعر بيع الشقق — وسيط السعر المطلوب (دولار)",
     definition_en:
-      "Planned originated indicator. Median asking price (USD) for used vehicles on Lebanese classifieds, indexed by (make, model, year). For each tuple Mabii publishes the median, sample size, age of the latest listing, and a freshness flag. Raw listings are not republished.",
+      "Median asking sale price for apartments and villas listed for sale on OLX Lebanon, by governorate. Weekly median + sample size per governorate; raw listings not stored. Outlier-trimmed (P5–P95).",
     definition_ar:
-      "مؤشر مخطَّط من إنتاج مَبني. وسيط السعر المطلوب (بالدولار) للسيارات المستعملة على الإعلانات المبوَّبة اللبنانية، موزَّعاً حسب (الماركة، الموديل، السنة). تنشر مَبني لكل تجميعة الوسيطَ وحجم العيّنة وعمر آخر إعلان ومؤشر التحديث. لا تُعاد نشر الإعلانات الخام.",
+      "وسيط سعر البيع المطلوب للشقق والفلل المعروضة للبيع على OLX لبنان، حسب المحافظة. وسيط أسبوعي وحجم عيّنة لكل محافظة؛ لا تُخزَّن الإعلانات الخام. مُشذَّب من القيم الشاذّة.",
+    default_unit: "USD",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "real_estate" },
+      { facet_type: "subtopic", facet_value: "sale_price" },
+      { facet_type: "frequency", facet_value: "weekly" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "governorate" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "olx-lebanon",
+        source_native_code: "listings.properties.sale",
+        comparability: "direct",
+        reconciliation_notes:
+          "Server-rendered listing cards parsed weekly; median per governorate, outlier-trimmed P5–P95.",
+        schedule: { cadence: "weekly", grace_days: 4 },
+      },
+    ],
+    primary_source_id: "olx-lebanon",
+    notes_en:
+      "Asking prices, not transaction prices. Trust 'modeled'. Coverage skews to Beirut + Mount Lebanon.",
+    notes_ar:
+      "أسعار مطلوبة لا معاملات فعلية. تصنيف ‘نموذجي’. التغطية تميل إلى بيروت وجبل لبنان.",
+  },
+  {
+    code: "mabii.transport.used_car_median_price_usd",
+    name_en: "Used cars — median asking price (USD)",
+    name_ar: "السيارات المستعملة — وسيط السعر المطلوب (دولار)",
+    definition_en:
+      "National median asking price for used cars listed on OLX Lebanon. Weekly median + sample size; raw listings not stored. Outlier-trimmed (P5–P95). A per-(make, model, year) breakdown is planned once structured attribute parsing lands.",
+    definition_ar:
+      "الوسيط الوطني للسعر المطلوب للسيارات المستعملة المعروضة على OLX لبنان. وسيط أسبوعي وحجم عيّنة؛ لا تُخزَّن الإعلانات الخام. مُشذَّب من القيم الشاذّة. يُخطَّط لتفصيل حسب (الماركة، الموديل، السنة) لاحقاً.",
     default_unit: "USD",
     geography_id: "LBN",
     facets: [
@@ -2344,15 +2363,15 @@ export const indicators: Indicator[] = [
         source_native_code: "listings.vehicles.cars",
         comparability: "direct",
         reconciliation_notes:
-          "Scraped daily; aggregated weekly to a (make, model, year) median with sample size. Outlier-trimmed.",
-        schedule: olxCarSchedule,
+          "Server-rendered listing cards parsed weekly; national median, outlier-trimmed P5–P95.",
+        schedule: { cadence: "weekly", grace_days: 4 },
       },
     ],
     primary_source_id: "olx-lebanon",
     notes_en:
-      "Planned for Phase 3. A high-frequency consumer-relevant series with no public alternative — likely a major driver of casual web traffic. Trust 'modeled'; methodology + sample-audit published with first release.",
+      "Asking prices, not transaction prices. Trust 'modeled'. Per-model breakdown deferred until attribute parsing is added.",
     notes_ar:
-      "مخطَّط للمرحلة الثالثة. سلسلة عالية التواتر ذات أهمّية للمستهلك دون بديل علني — يُرجَّح أن تكون من أكبر محرّكات حركة الزوّار. تصنيف ‘نموذجي’؛ المنهجية وتدقيق العيّنات يُنشَران مع أول إصدار.",
+      "أسعار مطلوبة لا معاملات فعلية. تصنيف ‘نموذجي’. تفصيل حسب الموديل مؤجَّل.",
   },
 ];
 

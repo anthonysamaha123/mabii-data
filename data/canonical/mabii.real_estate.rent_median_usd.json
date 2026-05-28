@@ -1,0 +1,57 @@
+{
+  "indicator_code": "mabii.real_estate.rent_median_usd",
+  "built_at": "2026-05-28T20:00:58.424Z",
+  "observations": [
+    {
+      "indicator_code": "mabii.real_estate.rent_median_usd",
+      "geography_id": "LBN-ML",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 1100,
+      "unit": "USD",
+      "source_id": "olx-lebanon",
+      "raw_ref": "4702565b8b8b19bddc4772685718bef7b33efedb58fbcf5c06225536871a2503",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "median for LBN-ML; sample_size=248 (P5–P95 trimmed, min 3)",
+      "fetched_at": "2026-05-28T20:00:34.680Z",
+      "version": 1
+    },
+    {
+      "indicator_code": "mabii.real_estate.rent_median_usd",
+      "geography_id": "LBN-BA",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 1800,
+      "unit": "USD",
+      "source_id": "olx-lebanon",
+      "raw_ref": "4702565b8b8b19bddc4772685718bef7b33efedb58fbcf5c06225536871a2503",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "median for LBN-BA; sample_size=146 (P5–P95 trimmed, min 3)",
+      "fetched_at": "2026-05-28T20:00:34.680Z",
+      "version": 1
+    },
+    {
+      "indicator_code": "mabii.real_estate.rent_median_usd",
+      "geography_id": "LBN-NO",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 1000,
+      "unit": "USD",
+      "source_id": "olx-lebanon",
+      "raw_ref": "4702565b8b8b19bddc4772685718bef7b33efedb58fbcf5c06225536871a2503",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 0.1,
+      "method_note": "median for LBN-NO; sample_size=3 (P5–P95 trimmed, min 3)",
+      "fetched_at": "2026-05-28T20:00:34.680Z",
+      "version": 1
+    }
+  ]
+}

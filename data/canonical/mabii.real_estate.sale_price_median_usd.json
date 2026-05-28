@@ -1,0 +1,57 @@
+{
+  "indicator_code": "mabii.real_estate.sale_price_median_usd",
+  "built_at": "2026-05-28T20:01:20.814Z",
+  "observations": [
+    {
+      "indicator_code": "mabii.real_estate.sale_price_median_usd",
+      "geography_id": "LBN-BA",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 715000,
+      "unit": "USD",
+      "source_id": "olx-lebanon",
+      "raw_ref": "c7db57913aff7fc810268c74cb5e2b75642b99ce355f4d8e78a0ec6a8ae7ed4c",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "median for LBN-BA; sample_size=113 (P5–P95 trimmed, min 3)",
+      "fetched_at": "2026-05-28T20:00:34.680Z",
+      "version": 1
+    },
+    {
+      "indicator_code": "mabii.real_estate.sale_price_median_usd",
+      "geography_id": "LBN-ML",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 225000,
+      "unit": "USD",
+      "source_id": "olx-lebanon",
+      "raw_ref": "c7db57913aff7fc810268c74cb5e2b75642b99ce355f4d8e78a0ec6a8ae7ed4c",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "median for LBN-ML; sample_size=279 (P5–P95 trimmed, min 3)",
+      "fetched_at": "2026-05-28T20:00:34.680Z",
+      "version": 1
+    },
+    {
+      "indicator_code": "mabii.real_estate.sale_price_median_usd",
+      "geography_id": "LBN-NO",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 135000,
+      "unit": "USD",
+      "source_id": "olx-lebanon",
+      "raw_ref": "c7db57913aff7fc810268c74cb5e2b75642b99ce355f4d8e78a0ec6a8ae7ed4c",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 0.7333333333333333,
+      "method_note": "median for LBN-NO; sample_size=22 (P5–P95 trimmed, min 3)",
+      "fetched_at": "2026-05-28T20:00:34.680Z",
+      "version": 1
+    }
+  ]
+}

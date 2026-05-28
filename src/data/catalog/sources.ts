@@ -938,7 +938,7 @@ export const sources: Source[] = [
       "Phase-3 build: scrape listings, extract structured fields (price, district, property type / make-model-year-mileage), compute per-district rent medians and per-(make, model, year) used-car medians. Raw listings are not republished; only aggregated medians with sample size and freshness. Methodology published; sample-audited; trust='modeled'.",
     ingest_method_ar:
       "في المرحلة الثالثة: كَشط الإعلانات، استخراج حقول مُهَيكلة (سعر، قضاء، نوع العقار / الماركة والموديل والسنة وعدد الكيلومترات)، وحساب وسطاء الإيجار بحسب القضاء ووسطاء أسعار السيارات بحسب (الماركة، الموديل، السنة). لا تُعاد نشر الإعلانات الخام؛ تُنشَر فقط الوسطاء المُجَمَّعة مع حجم العيّنة وتاريخ التحديث. منهجية منشورة؛ تدقيق عيّنات؛ تصنيف ‘نموذجي’.",
-    ingestion_status: "planned",
+    ingestion_status: "live",
     planned_phase: 3,
   },
   {
