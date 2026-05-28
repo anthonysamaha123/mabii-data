@@ -17,6 +17,7 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "topic", facet_value: "employment", label_en: "Employment", label_ar: "العمالة" },
   { facet_type: "topic", facet_value: "energy", label_en: "Energy", label_ar: "الطاقة" },
   { facet_type: "topic", facet_value: "real_estate", label_en: "Real estate", label_ar: "العقارات" },
+  { facet_type: "topic", facet_value: "transport", label_en: "Transport & vehicles", label_ar: "النقل والمركبات" },
 
   // ── subtopic ─────────────────────────────────────────────────────────
   { facet_type: "subtopic", facet_value: "gdp", parent: "macro", label_en: "Gross domestic product", label_ar: "الناتج المحلي الإجمالي" },
@@ -32,6 +33,9 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "exports", parent: "trade", label_en: "Exports", label_ar: "الصادرات" },
   { facet_type: "subtopic", facet_value: "imports", parent: "trade", label_en: "Imports", label_ar: "الواردات" },
   { facet_type: "subtopic", facet_value: "population", parent: "demographic", label_en: "Population", label_ar: "عدد السكان" },
+  { facet_type: "subtopic", facet_value: "rent", parent: "real_estate", label_en: "Residential rent", label_ar: "إيجار سكني" },
+  { facet_type: "subtopic", facet_value: "sale_price", parent: "real_estate", label_en: "Sale prices", label_ar: "أسعار البيع" },
+  { facet_type: "subtopic", facet_value: "used_cars", parent: "transport", label_en: "Used cars", label_ar: "السيارات المستعملة" },
 
   // ── frequency ────────────────────────────────────────────────────────
   { facet_type: "frequency", facet_value: "daily", label_en: "Daily", label_ar: "يومية" },

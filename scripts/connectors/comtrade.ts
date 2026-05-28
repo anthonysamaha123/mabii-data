@@ -8,6 +8,8 @@ import {
   isoDate,
   logConnectorRun,
   mergeObservations,
+  parseCodesFilter,
+  shouldProcess,
   writeRaw,
 } from "../lib/connector-utils";
 import { indicators } from "../../src/data/catalog/indicators";
@@ -60,6 +62,7 @@ async function pullSeries(flowCode: "X" | "M"): Promise<ComtradeRow[]> {
 async function run() {
   const source = sources.find((s) => s.id === SOURCE_ID)!;
   const fetched_at = isoDate();
+  const filter = parseCodesFilter();
   const results: Record<
     string,
     { added: number; updated: number; total: number }
@@ -76,6 +79,7 @@ async function run() {
     if (!mapping) continue;
     const flow = flowByIndicator[ind.code];
     if (!flow) continue;
+    if (!shouldProcess(ind.code, filter)) continue;
 
     console.log(`[comtrade] fetching ${ind.code} (flow=${flow})`);
     let rows: ComtradeRow[];

@@ -7,6 +7,8 @@ import {
   isoDate,
   logConnectorRun,
   mergeObservations,
+  parseCodesFilter,
+  shouldProcess,
   writeRaw,
 } from "../lib/connector-utils";
 import { indicators } from "../../src/data/catalog/indicators";
@@ -41,6 +43,7 @@ async function pullSeries(nativeCode: string): Promise<FredObservation[]> {
 async function run() {
   const source = sources.find((s) => s.id === SOURCE_ID)!;
   const fetched_at = isoDate();
+  const filter = parseCodesFilter();
   const results: Record<
     string,
     { added: number; updated: number; total: number }
@@ -49,6 +52,7 @@ async function run() {
   for (const ind of indicators) {
     const mapping = ind.sources.find((s) => s.source_id === SOURCE_ID);
     if (!mapping) continue;
+    if (!shouldProcess(ind.code, filter)) continue;
 
     console.log(`[fred] fetching ${ind.code} (${mapping.source_native_code})`);
     let rows: FredObservation[];

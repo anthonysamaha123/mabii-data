@@ -103,12 +103,38 @@ export interface IndicatorFacet {
   facet_value: string;
 }
 
+/**
+ * Per (indicator, source) update schedule.
+ * Pure data — the scheduler reads it deterministically; no AI.
+ *
+ *   cadence                : how often the source publishes
+ *   release_day_of_month   : optional — for monthly cadence, day in [1..28]
+ *   release_month_of_year  : optional — for annual cadence, month in [1..12]
+ *   secondary_release_month: optional — for biannual sources (e.g. IMF WEO ships in April AND October)
+ *   grace_days             : after expected release, allowed slack before going "stale"
+ *   notes                  : free-text explanation for the methodology page
+ *
+ * The expected next_update for a series is the next instance of (release_day, release_month)
+ * after last_fetched_at. If none of release_day/month are set, cadence default is used
+ * (daily=+1d, weekly=+7d, monthly=+30d, quarterly=+92d, annual=+365d).
+ */
+export interface Schedule {
+  cadence: Frequency;
+  release_day_of_month?: number;
+  release_month_of_year?: number;
+  secondary_release_month?: number;
+  grace_days: number;
+  notes?: string;
+}
+
 export interface IndicatorSourceMapping {
   source_id: string;
   /** The source's native identifier for this series. */
   source_native_code: string;
   comparability: "direct" | "after_conversion" | "directional_only";
   reconciliation_notes?: string;
+  /** When this source publishes this indicator. Read by the scheduler. */
+  schedule?: Schedule;
 }
 
 export interface Indicator {

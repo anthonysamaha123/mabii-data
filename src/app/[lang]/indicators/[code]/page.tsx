@@ -116,7 +116,15 @@ export default async function IndicatorDetailPage({ params }: PageProps) {
           style={{ fontFamily: "var(--font-sans)" }}
         >
           <Meta label={dict.indicator.unit} value={ind.default_unit} />
-          <Meta label={dict.indicator.frequency} value="Annual" />
+          <Meta
+            label={dict.indicator.frequency}
+            value={
+              (() => {
+                const fv = ind.facets.find((f) => f.facet_type === "frequency")?.facet_value;
+                return fv ? facetLabel("frequency", fv, lang) : "—";
+              })()
+            }
+          />
           <Meta label={dict.indicator.geography} value={ind.geography_id} />
           <Meta
             label={dict.indicator.sources_count}

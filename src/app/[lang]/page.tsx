@@ -6,11 +6,13 @@ import {
   sources,
   topicsInUse,
   getSource,
+  getIndicator,
 } from "@/data/queries";
 import { liveSources } from "@/data/catalog/sources";
 import {
   getLastFetchedAtForSource,
   getLatestObservation,
+  getObservations,
 } from "@/data/store";
 import { facetLabel } from "@/data/catalog/facet-vocabulary";
 import { formatDate, formatNumber, formatYear } from "@/lib/format";
@@ -19,6 +21,27 @@ import {
   freshnessForAnnualSeries,
   FreshnessBadge,
 } from "@/components/freshness-badge";
+import { IndicatorTile } from "@/components/indicator-tile";
+
+/**
+ * Curated set for the "Lebanon at a glance" tile grid.
+ * Per SPEC §13.3 this is the one permitted curated surface on the site:
+ * every entry is a deterministic indicator code, every tile links to its
+ * indicator detail page, no commentary.
+ *
+ * Selection rule: macro/fiscal/external/prices headline indicators with
+ * established data — the eight a reader has to know to read Lebanon.
+ */
+const AT_A_GLANCE_CODES = [
+  "mabii.macro.gdp_nominal_usd",
+  "mabii.macro.gdp_real_growth",
+  "mabii.prices.cpi_yoy",
+  "mabii.fiscal.gov_debt_pct_gdp",
+  "mabii.external.current_account_pct_gdp",
+  "mabii.trade.exports_goods_usd",
+  "mabii.trade.imports_goods_usd",
+  "mabii.demographic.population",
+];
 
 export default async function HomePage({
   params,
@@ -30,6 +53,20 @@ export default async function HomePage({
   const dict = await getDictionary(lang);
 
   const topics = topicsInUse();
+
+  const tileEntries = await Promise.all(
+    AT_A_GLANCE_CODES.map(async (code) => {
+      const ind = getIndicator(code);
+      if (!ind) return null;
+      const obs = await getObservations(code);
+      const latest = await getLatestObservation(code, ind.primary_source_id);
+      const src = latest ? getSource(latest.source_id) : undefined;
+      return { ind, obs, latest, src };
+    })
+  );
+  const tiles = tileEntries.filter(
+    (t): t is NonNullable<typeof t> => t !== null
+  );
 
   const indicatorRows = await Promise.all(
     indicators.map(async (ind) => {
@@ -67,6 +104,78 @@ export default async function HomePage({
         >
           {dict.home.intro_body}
         </p>
+      </section>
+
+      <section className="mb-12">
+        <div className="mb-4 flex items-baseline justify-between gap-4">
+          <h2 className="text-xl" style={{ fontWeight: 600 }}>
+            {dict.home.at_a_glance_heading}
+          </h2>
+          <p
+            className="hidden max-w-md text-xs md:block"
+            style={{
+              color: "var(--color-ink-mute)",
+              fontFamily: "var(--font-sans)",
+            }}
+          >
+            {dict.home.at_a_glance_sub}
+          </p>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {tiles.map(({ ind, obs, latest, src }) => (
+            <IndicatorTile
+              key={ind.code}
+              indicator={ind}
+              observations={obs}
+              latest={latest}
+              source={src}
+              locale={lang}
+              dict={dict}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <Link
+          href={`/${lang}/sources/reliability-map`}
+          className="block border p-5 no-underline"
+          style={{
+            borderColor: "var(--color-rule)",
+            background: "var(--color-bg-elev)",
+            color: "var(--color-ink)",
+          }}
+        >
+          <div
+            className="mb-1 text-xs uppercase tracking-wider"
+            style={{
+              color: "var(--color-accent)",
+              letterSpacing: "0.08em",
+              fontFamily: "var(--font-sans)",
+            }}
+          >
+            {lang === "ar" ? "خريطة موثوقية البيانات" : "Data Reliability Map"}
+          </div>
+          <div className="flex items-baseline justify-between gap-4">
+            <h2
+              className="text-lg md:text-xl"
+              style={{ fontWeight: 600, lineHeight: 1.35 }}
+            >
+              {lang === "ar"
+                ? "كل مصدر بيانات اقتصادي لبناني نتتبّعه — حيٌّ، مخطَّط، أو مؤجَّل — مع تصنيف صريح للحالة."
+                : "Every Lebanese economic data source we track — live, planned, or deferred — with the honest status spelled out."}
+            </h2>
+            <span
+              className="shrink-0 text-sm"
+              style={{
+                color: "var(--color-accent)",
+                fontFamily: "var(--font-sans)",
+              }}
+            >
+              {lang === "ar" ? "اعرض ←" : "Open →"}
+            </span>
+          </div>
+        </Link>
       </section>
 
       <section className="mb-12">
@@ -185,38 +294,6 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="mb-12">
-        <Link
-          href={`/${lang}/sources/reliability-map`}
-          className="block border p-5 no-underline"
-          style={{
-            borderColor: "var(--color-rule)",
-            background: "var(--color-bg-elev)",
-            color: "var(--color-ink)",
-          }}
-        >
-          <div
-            className="mb-1 text-xs uppercase tracking-wider"
-            style={{ color: "var(--color-accent)", letterSpacing: "0.08em", fontFamily: "var(--font-sans)" }}
-          >
-            {lang === "ar" ? "خريطة موثوقية البيانات" : "Data Reliability Map"}
-          </div>
-          <div className="flex items-baseline justify-between gap-4">
-            <h2 className="text-lg md:text-xl" style={{ fontWeight: 600, lineHeight: 1.35 }}>
-              {lang === "ar"
-                ? "كل مصدر بيانات اقتصادي لبناني نتتبّعه — حيٌّ، مخطَّط، أو مؤجَّل — مع تصنيف صريح للحالة."
-                : "Every Lebanese economic data source we track — live, planned, or deferred — with the honest status spelled out."}
-            </h2>
-            <span
-              className="shrink-0 text-sm"
-              style={{ color: "var(--color-accent)", fontFamily: "var(--font-sans)" }}
-            >
-              {lang === "ar" ? "اعرض ←" : "Open →"}
-            </span>
-          </div>
-        </Link>
-      </section>
-
       <section className="mb-12 grid gap-10 md:grid-cols-2">
         <div>
           <h2 className="mb-3 text-xl" style={{ fontWeight: 600 }}>
@@ -245,7 +322,7 @@ export default async function HomePage({
               {dict.home.status_heading}
             </h2>
             <Link
-              href={`/${lang}/sources/reliability-map`}
+              href={`/${lang}/status`}
               className="text-xs no-underline"
               style={{
                 color: "var(--color-accent)",

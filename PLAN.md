@@ -14,6 +14,7 @@ This is the executable plan to go from an empty folder to a credible, cited inst
 | **−1 — Pre-engineering** | Decisions, accounts, legal foundation | None | 1–2 weeks |
 | **0 — Foundations** | Spine + glass house + onboarding workbench | Skeleton site (about/methodology/funding only) | 4–6 weeks |
 | **1 — Aggregate (launch)** | Be useful, cited, trusted | Data Reliability Map + ~15 indicators + open API | 6–10 weeks |
+| **1.5 — Visualisation layer** | Every indicator looks like itself; consumer-accessible entry surface | Six chart primitives + Lebanon map + at-a-glance home | 3–5 weeks |
 | **2 — Synthesize** | Become an authority | ~75 indicators + T2 scrapes + reconciliation math | 4–6 months |
 | **3 — Originate** | Produce unique data + first revenue | Scraped price index, trade-mirror, paid API tier | 6–12 months |
 | **4 — Leverage** | Become the reference; stand up Accountability Arm | Citations in policy machinery; firewalled second org | Ongoing |
@@ -228,6 +229,89 @@ The initial publication is itself a changelog entry. Every corrected value there
 
 ---
 
+## Phase 1.5 — Visualisation layer (3–5 weeks)
+
+**Goal:** every indicator looks like itself. The data we already have becomes legible to a non-expert, and the chart primitives are in place before T2 scaling so that new sources land beautifully on day one. Compatible with SPEC §2.13 ("visualise, don't opine over") by construction — every chart is a deterministic function of an indicator code + a faceted query, reproducible from URL alone.
+
+### Entry conditions
+Phase 1 launched and stable for 4+ weeks. At least one external citation captured. Library choice made (see §−1.1 decisions, deferred until this phase). Lebanon administrative GeoJSON sourced and licence verified.
+
+### Workstreams
+
+**1.5a — Visualisation library decision and integration**
+Pick one. Recommendation: **Observable Plot** (functional API, minimal/institutional aesthetic, server-renderable, low bundle weight). Alternative: roll-our-own SVG primitives (more work, full control, no dependency). Locked decision before any chart code is written.
+
+**1.5b — Six chart primitives, no more (SPEC §13.3)**
+- `TimeSeriesLine` — one series, x = time
+- `MultiSourceLine` — same indicator, multiple sources, color-coded per `source_id` with a stable site-wide palette (the IMF line is the same colour everywhere)
+- `Sparkline` — already shipped; refactored to match the family API
+- `CategoryBar` — sorted bars, x = category
+- `Treemap` — nested rectangles sized by value
+- `Histogram` — distribution of many values
+- `Choropleth` — covered separately in 1.5d
+
+Each primitive: same fonts, sizing, color discipline (SPEC §13.1/§13.3). Same props shape. Each renders a `<svg>` with a tabular `<table>` fallback toggle adjacent.
+
+**1.5c — Lebanon geography hierarchy populated**
+- Seed `geography` table with all 8 governorates and all districts (~26).
+- Source: Lebanese government administrative boundaries (or OpenStreetMap-derived). Licence: CC-BY or public domain.
+- GeoJSON cleaned to topojson for bundle efficiency.
+
+**1.5d — Choropleth map primitive**
+- Server-rendered inline SVG; no client JS for static rendering.
+- Two zoom levels: governorate (8 polygons), district (26 polygons).
+- Single accent ramp for choropleth fill (sequential, not divergent — divergent palette only when the indicator is itself signed).
+- Hover state adds value+vintage; static rendering already conveys magnitude via fill.
+
+**1.5e — Indicator catalog extended with chart metadata (SPEC §6)**
+- Add `preferred_chart_type` ENUM and `chart_config` JSON to every indicator.
+- Sensible defaults per (frequency × geography_level × stock_or_flow).
+- Migration is additive; existing observations untouched.
+
+**1.5f — Every existing indicator renders the right chart**
+- GDP / CPI / FX / debt → `TimeSeriesLine` + `MultiSourceLine` (the multi-source table stays, the chart joins it)
+- Trade exports/imports → `TimeSeriesLine` headline; partner breakdown → `Treemap` once Phase 2 data lands
+- Population → `TimeSeriesLine` + (when district data lands in Phase 2) `Choropleth`
+- Every chart gets source line, methodology link, "view as table" toggle.
+
+**1.5g — Topic pages composed as deterministic primitive grids**
+A topic page (`/topics/banking`) renders every indicator tagged `topic=banking` in its `preferred_chart_type`, in a clean grid. The composition is a SQL query. No editorial selection. Same query → same page, every time.
+
+**1.5h — Home: "Lebanon at a glance"**
+Tile grid of 8–12 headline indicators. Each tile = sparkline + last value + freshness badge + topic. Curated by the team (which 8–12), but every tile is a deterministic faceted-query URL and links to its indicator detail page. No commentary, no rotation, no "featured." This is the consumer-friendly entry surface — the one SPEC §13.3 permits.
+
+**1.5i — Mobile-first responsive + accessibility pass**
+- All charts reflow on narrow viewports; never overflow.
+- WCAG 2.1 AA: every chart has a real `<table>` equivalent reachable by a sighted toggle and by screen readers.
+- Print-friendly: charts render cleanly to paper, methodology links inline.
+
+**1.5j — Provenance footer is universal**
+Every chart, every map: source line, as-of date, "view as table" toggle, "view methodology" link, "open in API" link. Built into the primitive, not added per page.
+
+### Exit criteria
+- Every existing indicator detail page renders the chart appropriate to its data shape, with provenance footer.
+- At least one topic page renders the composed-grid layout (banking or external sector recommended as first).
+- Home shows the at-a-glance tile grid.
+- One choropleth map exists somewhere on the site (population by governorate works today — WorldPop is Phase 2, but the WB total can be split by available subnational source or shown as a country-level fill for demo).
+- Every chart passes the a11y audit (axe-core in CI).
+- iPhone SE viewport check passes for every page.
+- A new visitor (someone with no economics background) can find and read a headline indicator in under 30 seconds from the home page.
+
+### Decisions during Phase 1.5
+- **Library:** Observable Plot vs roll-our-own SVG. (Recommendation: Plot.)
+- **Map detail level:** governorate-only for v1.5, or governorate + district. (Recommendation: ship both, since the GeoJSON cost is the same; render the level the indicator's `chart_config` specifies.)
+- **Which indicators get prime real estate on home at-a-glance.** Editorial call; document the choices on a methodology page so the curation rule is visible.
+- **Sparkline-on-table-row.** Adding a tiny sparkline to every indicator row on `/indicators` makes the table feel alive but adds ~50ms render time. Pick.
+- **Cross-filtering between charts on topic pages.** Decision: **no.** Implies causation; too easy to mislead. Each chart stands alone.
+
+### Risks
+- **Aesthetic drift.** The site is plain by design; the temptation will be to "make charts pop" with colour and effects. Resist. The discipline IS the brand.
+- **Library lock-in.** Plot is well-maintained but evolving. Pin a version; review yearly.
+- **Map licence.** Verify the GeoJSON source before commit. CC-BY needs attribution in the page footer.
+- **Map detail expectations.** Users will ask for street-level. The answer is no — that's a different product. District is the floor for Mabii.
+
+---
+
 ## Phase 2 — Synthesize (4–6 months)
 
 **Goal:** Mabii becomes an authority. T2 (scraped / PDF) sources come online, dramatically expanding coverage but also dramatically expanding maintenance load. Reconciliation math is live and visible.
@@ -327,6 +411,18 @@ Phase 2 exit criteria met. Pipeline maintenance is sustainable (not in firefight
 - Publish a methodology paper (real document, peer-reviewable).
 - Acknowledge limitations honestly; sample-audit against any available ground truth.
 - Shipped as a regular indicator with `extraction_method = derived` and `trust_label = modeled`.
+
+**3a.1 — Rent and used-car indices from OLX Lebanon (consumer-traffic flagships)**
+- Two originated indicators that have *no public alternative* and high consumer pull, both fed from the same OLX Lebanon connector:
+  - `mabii.real_estate.rent_median_lbp_per_district` — monthly median residential rent by district (Choropleth + TimeSeriesLine on the indicator page; SPEC §13.3 primitives).
+  - `mabii.transport.used_car_median_price_by_model` — weekly median asking price by (make, model, year). Browse UI = facet picker for make/model/year, result is a table of medians with sample size and freshness on every cell.
+- These are the most likely sources of *casual* (non-researcher) traffic. Treat them as institutional discipline, not consumer-app:
+  - Mabii never republishes raw listings. Only aggregated medians + sample size + last-updated.
+  - ToS and licensing reviewed by counsel before first publish.
+  - Outlier-trimmed (P5–P95) with the trim rule public.
+  - Sample-audited monthly against retained raw scrapes; measured error rate published.
+  - `trust_label = modeled` everywhere; methodology paper published alongside.
+- These ship *after* 3a's base methodology lands so they reuse the same statistical conventions (median, outlier rule, freshness flag).
 
 **3b — Trade-mirror analysis**
 - Per-commodity, per-partner: compare Lebanese customs vs. partner-country Comtrade.

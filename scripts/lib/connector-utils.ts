@@ -29,6 +29,32 @@ export function isoDateOnly(d = new Date()): string {
   return d.toISOString().slice(0, 10);
 }
 
+/**
+ * Parse `--codes=a,b,c` out of process.argv (or `--code=a`).
+ * Returns an empty Set when no filter is provided — caller treats this as "run all".
+ */
+export function parseCodesFilter(argv = process.argv.slice(2)): Set<string> {
+  const set = new Set<string>();
+  for (const arg of argv) {
+    if (arg.startsWith("--codes=") || arg.startsWith("--code=")) {
+      const value = arg.split("=", 2)[1];
+      for (const code of value.split(",")) {
+        const trimmed = code.trim();
+        if (trimmed) set.add(trimmed);
+      }
+    }
+  }
+  return set;
+}
+
+/** True if the indicator should be processed given the active filter. */
+export function shouldProcess(
+  indicator_code: string,
+  filter: Set<string>
+): boolean {
+  return filter.size === 0 || filter.has(indicator_code);
+}
+
 export interface RawWriteResult {
   hash: string;
   relativePath: string;

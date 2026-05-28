@@ -45,7 +45,9 @@
   "home": {
     "intro_heading": "An independent, sourced view of the Lebanese economy.",
     "intro_body": "Mabii pools data from multilaterals, central banks, ministries, and market sources into one comparable catalogue — with a source reference on every number and visible freshness on every series.",
-    "indicators_heading": "Indicators",
+    "at_a_glance_heading": "Lebanon at a glance",
+    "at_a_glance_sub": "Headline indicators with their last value, period, trend, and freshness. Click any tile for the full multi-source view.",
+    "indicators_heading": "All indicators",
     "indicators_sub": "Every value is linked to its source; every series shows its own freshness.",
     "topics_heading": "Browse by topic",
     "sources_heading": "Sources",

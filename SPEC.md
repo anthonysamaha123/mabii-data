@@ -2,8 +2,14 @@
 **Mabii** · *Market Analytics & Business Intelligence Infrastructure*
 *The independent data and accountability backbone for the Lebanese economy.*
 
-**Version:** 1.3 (concept architecture)
+**Version:** 1.4 (concept architecture)
 **Status:** Pre-build blueprint
+**v1.4 changes (over v1.3):**
+- Adds the **Visualize, Don't Opine Over** principle (§2.13). Charts and maps describe the data; methodology contextualises; users interpret. No AI-generated commentary, no "insights" widgets, no editorial story-of-the-week.
+- Extends the **canonical data model** (§6) with `preferred_chart_type` and `chart_config` per indicator, so every indicator renders deterministically as the visualisation appropriate to its shape.
+- Extends the **website visual standard** (§13) with §13.3 — visualisation principles: six reusable primitives sitewide (TimeSeriesLine, MultiSourceLine, CategoryBar, Treemap, Choropleth, Histogram), one accent per series, stable color per source sitewide, source line on every chart, table fallback for accessibility, mobile-first, no 3D / shadow / gradient / animation.
+- Adds **Lebanon-at-a-glance** as a permitted home-page surface (§13.3): a curated tile grid of headline indicators with sparklines and freshness — every tile is a deterministic faceted-query URL, no commentary.
+
 **v1.3 changes (over v1.2):**
 - Adds the **Pool, Don't Opine** principle (§2.12) — the system joins data, it does not compose views or assert relationships.
 - Formalizes a **Faceted Catalog** (§6) and an explicit **Query Model** (§7) so subject browsing is a deterministic SQL join, not an AI-generated narrative.
@@ -69,6 +75,7 @@ These are not features bolted on; they are structural constraints the system mus
 10. **Two-arm firewall.** Data and Accountability arms run on separate infrastructure with separate access; a breach of one cannot compromise the other.
 11. **Boring, proven tech, runnable for free.** A modular monolith on well-understood, free-tier-friendly tools beats fashionable complexity at this scale.
 12. **Pool, don't opine.** The system joins data; it never composes a view, asserts a relationship, or generates narrative. Subject browsing is a SQL join over a faceted catalog (see §7) — the *user* composes meaning, Mabii supplies rows with provenance. This makes Mabii cheap to run, deterministic to query, and impossible to accuse of editorial bias.
+13. **Visualise, don't opine over.** Charts and maps describe the data; they do not narrate it. Every visualisation is a deterministic function of an indicator (or a faceted query) — reproducible from URL alone, with provenance attached and a one-click trail to the rows that produced it. No AI-generated commentary, no "insights" widgets, no editorial story-of-the-week. A picture of the data is permitted; a story about the data is not.
 
 ---
 
@@ -286,16 +293,21 @@ Two sources reporting the "same" thing are two `observation` rows sharing an `in
 ```
 indicator
 ---------
-id                  BIGINT PK
-code                TEXT UNIQUE   -- e.g. 'mabii.macro.gdp_nominal_usd'
-name_en             TEXT
-name_ar             TEXT
-definition_en       TEXT
-definition_ar       TEXT
-default_unit        TEXT
-primary_source_id   FK NULL → source(id)   -- optional: deterministic rule for "headline" value
-notes_en            TEXT
-notes_ar            TEXT
+id                    BIGINT PK
+code                  TEXT UNIQUE   -- e.g. 'mabii.macro.gdp_nominal_usd'
+name_en               TEXT
+name_ar               TEXT
+definition_en         TEXT
+definition_ar         TEXT
+default_unit          TEXT
+primary_source_id     FK NULL → source(id)   -- optional: deterministic rule for "headline" value
+preferred_chart_type  ENUM(time_series_line, multi_source_line, sparkline,
+                           category_bar, treemap, choropleth, histogram, none)
+chart_config          JSONB NULL    -- y_scale (linear|log), color_basis,
+                                    --   geography_level (for choropleth), etc.
+                                    --   See §13.5 for the deterministic contract.
+notes_en              TEXT
+notes_ar              TEXT
 ```
 
 ```
@@ -604,7 +616,49 @@ Left: small wordmark "Mabii" + tagline ("Lebanese economic data, sourced"). Cent
 - Provenance contract: every response carries `source`, `raw_ref`, `vintage`, `fetched_at`, `trust_label`, `extraction_method`.
 - Example requests + bulk-download recipes.
 
-### 13.3 What this layout deliberately does not have
+### 13.3 Visualisation principles
+
+The site renders data visually — line charts, bar charts, maps, treemaps — because tables alone exclude non-expert visitors and obscure shape that a chart makes obvious. The §2.13 principle holds: visualise, never opine over. These rules keep the visual layer compatible with the trust posture.
+
+**Six primitives, no more.**
+The whole site uses one of six chart types. No bespoke visuals invented per page; consistency is the aesthetic.
+
+| Primitive | Renders | Used for |
+|---|---|---|
+| `TimeSeriesLine` | One series, x = time | Headline trend on an indicator detail page |
+| `MultiSourceLine` | Multiple sources of the same indicator, color-coded per source | The unified divergence view as a chart |
+| `Sparkline` | Compact line, no axes | "Lebanon at a glance" tiles, table rows |
+| `CategoryBar` | Sorted bars, x = category | Trade by partner, sector composition |
+| `Treemap` | Nested rectangles sized by value | Hierarchical composition (HS-section, bank-sector size) |
+| `Choropleth` | Lebanon map shaded by indicator value | Geographic indicators (rent, population density, refugees per governorate) |
+| `Histogram` | Distribution of many values | Listing-price ranges per district, etc. |
+
+**Visual discipline.**
+- One accent for primary series. Multi-source comparisons use a small fixed palette where each `source_id` has a *stable colour sitewide* — the IMF line is the same colour on every chart.
+- No 3D, no shadows, no gradients, no animation on the visualisation itself.
+- Source line *under every chart and every map*, citing every source represented and the as-of date.
+- Color stays semantic: red = divergence/stale, amber = low-confidence/AI-unreviewed, green = fresh, accent = data. No decorative palettes.
+- Tooltips may *add* detail on hover but never replace essential labels; the static rendering must already convey the data.
+- Maps use Lebanon governorate + district outlines, plain accent for choropleth fill, no decorative basemap (no roads, no labels unless required by the data).
+
+**Accessibility — table fallback for every chart.**
+Every visualisation has an adjacent "view as table" toggle that exposes the same data as a sortable table. Screen-reader equivalents, print-friendly, mobile-first responsive. WCAG 2.1 AA.
+
+**Lebanon at a glance — the one permitted curated surface.**
+The home page may host a tile grid of 8–12 headline indicators (each tile = sparkline + last value + freshness badge + topic). Curated by the team, but every tile is a deterministic faceted-query URL and links to its indicator detail page. *No commentary, no story, no rotation.* This is the consumer-friendly entry surface; it does not violate §2.12 or §2.13 because the composition is reproducible from URL alone.
+
+**Topic pages — composed but deterministic.**
+A topic page (e.g. `/topics/banking`) may render multiple primitives together (deposits chart + lending chart + the rate spread) — but the composition is a SQL query: "all indicators tagged `topic=banking` rendered in their `preferred_chart_type`." Same query → same page, every time. No editorial selection of "what to show."
+
+**What this rules out (so the visual layer cannot drift):**
+- AI-generated chart titles, captions, or "insights" sidebars.
+- A "Featured visualisation" or "Story of the week" carousel.
+- Cross-filtering that implies causation (clicking one chart highlights another) — too easy to mislead.
+- "Compare with regional peers" overlays that pick peers editorially. (Peer comparators must come from a deterministic facet, e.g. "geography_level = country AND region = Levant".)
+- Custom chart types built per page.
+- Decorative iconography next to charts ("housing icon", "trade icon" etc.) — typography carries the meaning.
+
+### 13.4 What this layout deliberately does not have
 
 - No marketing hero, no rotating banner, no "Get started in 3 steps."
 - No testimonials, no logo wall, no social proof carousel.
@@ -614,7 +668,7 @@ Left: small wordmark "Mabii" + tagline ("Lebanese economic data, sourced"). Cent
 
 If any of these creep in over time, the site has drifted away from the institutional posture and toward a content/marketing product — which would compromise the trust position.
 
-### 13.4 Routing & URL contract
+### 13.5 Routing & URL contract
 
 - URLs are stable and meaningful: `/indicators/mabii.macro.gdp_nominal_usd`, `/sources/world-bank-wdi`, `/topics/banking/solvency`.
 - Every URL is citeable: the page at a URL today returns the same data at that URL next year (subject to versioned corrections, which are themselves visible).

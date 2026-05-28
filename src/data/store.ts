@@ -156,6 +156,25 @@ export async function getLastFetchedAtForSource(
   return latest;
 }
 
+/** Latest fetched_at per (indicator_code, source_id). Used by the status page. */
+export async function getLastFetchedMap(): Promise<
+  Map<string, Map<string, string>>
+> {
+  const all = await loadAll();
+  const result = new Map<string, Map<string, string>>();
+  for (const [code, file] of all) {
+    const bySource = new Map<string, string>();
+    for (const obs of file.observations) {
+      const prior = bySource.get(obs.source_id);
+      if (!prior || obs.fetched_at > prior) {
+        bySource.set(obs.source_id, obs.fetched_at);
+      }
+    }
+    result.set(code, bySource);
+  }
+  return result;
+}
+
 export function clearStoreCache() {
   cache = null;
 }
