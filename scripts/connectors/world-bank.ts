@@ -32,9 +32,11 @@ interface WBObservation {
 type WBResponse = [Record<string, unknown>, WBObservation[]];
 
 async function pullSeries(nativeCode: string): Promise<WBObservation[]> {
+  // WGI indicators (GOV_WGI_*) live under WB source=3, not the default WDI.
+  const sourceParam = nativeCode.startsWith("GOV_WGI_") ? "&source=3" : "";
   const url = `https://api.worldbank.org/v2/country/${COUNTRY}/indicator/${encodeURIComponent(
     nativeCode
-  )}?format=json&per_page=20000`;
+  )}?format=json&per_page=20000${sourceParam}`;
   const data = (await fetchJson(url)) as WBResponse;
   if (!Array.isArray(data) || data.length !== 2 || !Array.isArray(data[1])) {
     throw new Error(`Unexpected WB response shape for ${nativeCode}`);

@@ -21,6 +21,9 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "topic", facet_value: "infrastructure", label_en: "Infrastructure & connectivity", label_ar: "البنى التحتية والاتّصال" },
   { facet_type: "topic", facet_value: "social", label_en: "Social & development", label_ar: "اجتماعي وتنموي" },
   { facet_type: "topic", facet_value: "humanitarian", label_en: "Humanitarian", label_ar: "إنساني" },
+  { facet_type: "topic", facet_value: "governance", label_en: "Governance & institutions", label_ar: "الحوكمة والمؤسسات" },
+  { facet_type: "topic", facet_value: "health", label_en: "Health", label_ar: "الصحة" },
+  { facet_type: "topic", facet_value: "environment", label_en: "Environment & energy", label_ar: "البيئة والطاقة" },
 
   // ── subtopic ─────────────────────────────────────────────────────────
   { facet_type: "subtopic", facet_value: "gdp", parent: "macro", label_en: "Gross domestic product", label_ar: "الناتج المحلي الإجمالي" },
@@ -74,6 +77,22 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "schooling", parent: "social", label_en: "School enrolment", label_ar: "الالتحاق بالمدارس" },
   // Humanitarian
   { facet_type: "subtopic", facet_value: "refugees", parent: "humanitarian", label_en: "Registered refugees", label_ar: "اللاجئون المسجّلون" },
+  // Governance
+  { facet_type: "subtopic", facet_value: "corruption", parent: "governance", label_en: "Corruption control", label_ar: "مكافحة الفساد" },
+  { facet_type: "subtopic", facet_value: "rule_of_law", parent: "governance", label_en: "Rule of law", label_ar: "سيادة القانون" },
+  { facet_type: "subtopic", facet_value: "voice_accountability", parent: "governance", label_en: "Voice and accountability", label_ar: "التعبير والمساءلة" },
+  { facet_type: "subtopic", facet_value: "political_stability", parent: "governance", label_en: "Political stability", label_ar: "الاستقرار السياسي" },
+  { facet_type: "subtopic", facet_value: "government_effectiveness", parent: "governance", label_en: "Government effectiveness", label_ar: "فاعلية الحكومة" },
+  { facet_type: "subtopic", facet_value: "regulatory_quality", parent: "governance", label_en: "Regulatory quality", label_ar: "جودة الأنظمة" },
+  // Health
+  { facet_type: "subtopic", facet_value: "mortality", parent: "health", label_en: "Mortality", label_ar: "الوفيات" },
+  { facet_type: "subtopic", facet_value: "health_expenditure", parent: "health", label_en: "Health expenditure", label_ar: "الإنفاق الصحي" },
+  { facet_type: "subtopic", facet_value: "health_workforce", parent: "health", label_en: "Health workforce & beds", label_ar: "الكادر الصحي والأسرّة" },
+  { facet_type: "subtopic", facet_value: "immunization", parent: "health", label_en: "Immunization", label_ar: "التحصين" },
+  // Environment
+  { facet_type: "subtopic", facet_value: "co2_emissions", parent: "environment", label_en: "CO2 emissions", label_ar: "انبعاثات ثاني أكسيد الكربون" },
+  { facet_type: "subtopic", facet_value: "electricity_access", parent: "environment", label_en: "Electricity access", label_ar: "الوصول إلى الكهرباء" },
+  { facet_type: "subtopic", facet_value: "energy_mix", parent: "environment", label_en: "Energy mix", label_ar: "مزيج الطاقة" },
 
   // ── frequency ────────────────────────────────────────────────────────
   { facet_type: "frequency", facet_value: "daily", label_en: "Daily", label_ar: "يومية" },

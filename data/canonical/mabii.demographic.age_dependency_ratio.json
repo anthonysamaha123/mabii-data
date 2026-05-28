@@ -1,6 +1,6 @@
 {
   "indicator_code": "mabii.demographic.age_dependency_ratio",
-  "built_at": "2026-05-28T13:45:51.830Z",
+  "built_at": "2026-05-28T14:46:43.649Z",
   "observations": [
     {
       "indicator_code": "mabii.demographic.age_dependency_ratio",
@@ -14,7 +14,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -29,7 +29,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -44,7 +44,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -59,7 +59,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -74,7 +74,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -89,7 +89,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -104,7 +104,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -119,7 +119,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -134,7 +134,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -149,7 +149,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -164,7 +164,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -179,7 +179,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -194,7 +194,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -209,7 +209,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -224,7 +224,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -239,7 +239,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -254,7 +254,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -269,7 +269,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -284,7 +284,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -299,7 +299,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -314,7 +314,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -329,7 +329,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -344,7 +344,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -359,7 +359,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -374,7 +374,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -389,7 +389,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -404,7 +404,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -419,7 +419,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -434,7 +434,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -449,7 +449,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -464,7 +464,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -479,7 +479,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -494,7 +494,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -509,7 +509,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -524,7 +524,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -539,7 +539,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -554,7 +554,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -569,7 +569,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -584,7 +584,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -599,7 +599,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -614,7 +614,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -629,7 +629,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -644,7 +644,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -659,7 +659,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -674,7 +674,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -689,7 +689,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -704,7 +704,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -719,7 +719,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -734,7 +734,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -749,7 +749,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -764,7 +764,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -779,7 +779,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -794,7 +794,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -809,7 +809,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -824,7 +824,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -839,7 +839,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -854,7 +854,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -869,7 +869,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -884,7 +884,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -899,7 +899,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -914,7 +914,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -929,7 +929,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -944,7 +944,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -959,7 +959,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -974,7 +974,7 @@
       "raw_ref": "0ff7c7d8686fcc1ce75088534ffeb8582f65cccc2f4cecb2d52fefd79aea0bd0",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     }
   ]

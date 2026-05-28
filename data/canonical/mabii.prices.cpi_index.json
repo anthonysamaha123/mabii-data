@@ -1,6 +1,6 @@
 {
   "indicator_code": "mabii.prices.cpi_index",
-  "built_at": "2026-05-28T13:45:49.774Z",
+  "built_at": "2026-05-28T14:46:42.970Z",
   "observations": [
     {
       "indicator_code": "mabii.prices.cpi_index",
@@ -14,7 +14,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -29,7 +29,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -44,7 +44,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -59,7 +59,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -74,7 +74,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -89,7 +89,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -104,7 +104,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -119,7 +119,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -134,7 +134,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -149,7 +149,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -164,7 +164,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -179,7 +179,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -194,7 +194,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -209,7 +209,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -224,7 +224,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -239,7 +239,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     },
     {
@@ -254,7 +254,7 @@
       "raw_ref": "09d9632e9119810a38830ddfec7324720adf6dcbbba17ffb80fd474bc29d9183",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "fetched_at": "2026-05-28T14:46:39.518Z",
       "version": 1
     }
   ]
