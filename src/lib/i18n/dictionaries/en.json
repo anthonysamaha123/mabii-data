@@ -1,0 +1,110 @@
+{
+  "site": {
+    "name": "Mabii",
+    "tagline": "Lebanese economic data, sourced",
+    "long_tagline": "Market Analytics & Business Intelligence Infrastructure for the Lebanese economy"
+  },
+  "nav": {
+    "data": "Data",
+    "topics": "Topics",
+    "sources": "Sources",
+    "methodology": "Methodology",
+    "api": "API",
+    "about": "About",
+    "browse": "Browse",
+    "status": "Status",
+    "changelog": "Changelog",
+    "funding": "Funding"
+  },
+  "footer": {
+    "data": "Data",
+    "data_all": "All indicators",
+    "data_sources": "Sources",
+    "data_topics": "Topics",
+    "data_downloads": "Downloads",
+    "methodology": "Methodology",
+    "methodology_standards": "Accuracy standard",
+    "methodology_vintage": "Vintage policy",
+    "methodology_trust": "Trust labels",
+    "methodology_facets": "Facet vocabulary",
+    "about": "About",
+    "about_us": "About",
+    "about_funding": "Funding disclosure",
+    "about_governance": "Governance",
+    "about_contact": "Contact",
+    "about_status": "Status",
+    "about_changelog": "Changelog",
+    "tech": "Technical",
+    "tech_api": "API",
+    "tech_license": "Open data license",
+    "tech_version": "Build",
+    "tech_refreshed": "Last refresh",
+    "legal": "Mabii is independent. No funding from any entity it might investigate.",
+    "license_short": "Mabii-curated metadata under CC-BY-4.0. Source data retains original licensing."
+  },
+  "home": {
+    "intro_heading": "An independent, sourced view of the Lebanese economy.",
+    "intro_body": "Mabii pools data from multilaterals, central banks, ministries, and market sources into one comparable catalogue — with a source reference on every number and visible freshness on every series.",
+    "indicators_heading": "Indicators",
+    "indicators_sub": "Every value is linked to its source; every series shows its own freshness.",
+    "topics_heading": "Browse by topic",
+    "sources_heading": "Sources",
+    "status_heading": "Pipeline status",
+    "view_all": "View all"
+  },
+  "indicator": {
+    "definition": "Definition",
+    "unit": "Unit",
+    "frequency": "Frequency",
+    "geography": "Geography",
+    "trust": "Trust label",
+    "last_updated": "Last updated",
+    "next_expected": "Next expected",
+    "sources_count": "Sources",
+    "methodology": "Methodology",
+    "provenance": "Provenance",
+    "cite_heading": "Cite this",
+    "downloads_heading": "Downloads",
+    "multi_source_table": "Values by source",
+    "period": "Period",
+    "value": "Value",
+    "source": "Source",
+    "vintage": "Vintage",
+    "fetched": "Fetched",
+    "divergence": "Range"
+  },
+  "source": {
+    "publisher": "Publisher",
+    "tier": "Tier",
+    "license": "License",
+    "url": "Website",
+    "cadence": "Cadence",
+    "last_fetch": "Last successful fetch",
+    "freshness": "Freshness",
+    "indicators_heading": "Indicators from this source"
+  },
+  "browse": {
+    "heading": "Browse indicators",
+    "filter_topic": "Topic",
+    "filter_subtopic": "Subtopic",
+    "filter_geography": "Geography",
+    "filter_frequency": "Frequency",
+    "filter_currency": "Currency basis",
+    "filter_source": "Source",
+    "clear": "Clear",
+    "results": "Results",
+    "no_results": "No indicators match the selected filters. The facet vocabulary is published — see methodology to request a missing facet."
+  },
+  "trust": {
+    "official": "Official",
+    "proxy": "Proxy",
+    "modeled": "Modeled",
+    "reference": "Reference"
+  },
+  "freshness": {
+    "fresh": "On schedule",
+    "due_soon": "Update due soon",
+    "stale": "Overdue",
+    "no_schedule": "No regular cadence"
+  }
+}

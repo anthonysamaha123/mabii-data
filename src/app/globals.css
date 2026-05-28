@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  /* Institutional palette — semantic only, no decoration */
+  --color-bg: #fbfaf7;
+  --color-bg-elev: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #4a4a4a;
+  --color-ink-mute: #767676;
+  --color-rule: #e4e1d9;
+  --color-rule-soft: #ededea;
+  --color-accent: #1f3a5f;
+  --color-accent-soft: #4a6694;
+  --color-flag-stale: #b03a2e;
+  --color-flag-divergent: #b03a2e;
+  --color-flag-low-conf: #a76a00;
+  --color-flag-ok: #2e7d4a;
+
+  --font-serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans", -apple-system, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--color-accent-soft);
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Tables — the primary content unit */
+table {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--color-rule);
+  background: var(--color-bg);
+}
+
+td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-rule-soft);
+  vertical-align: top;
+}
+
+/* Numeric cells: tabular figures, right aligned */
+td.num, th.num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  font-family: var(--font-sans);
+}
+
+/* RTL handling — flip number alignment */
+html[dir="rtl"] td.num, html[dir="rtl"] th.num {
+  text-align: left;
+}
+
+html[dir="rtl"] th, html[dir="rtl"] td {
+  text-align: right;
+}
+
+/* Code / inline literals */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--color-rule-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+/* Print resets — for citation */
+@media print {
+  html { background: #fff; }
+  a { color: #000; text-decoration: none; }
+}

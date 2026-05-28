@@ -1,0 +1,110 @@
+{
+  "site": {
+    "name": "مَبني",
+    "tagline": "بيانات الاقتصاد اللبناني، موثَّقة بمصادرها",
+    "long_tagline": "بنية تحتية لتحليل السوق والمعلومات الاقتصادية للبنان"
+  },
+  "nav": {
+    "data": "البيانات",
+    "topics": "المواضيع",
+    "sources": "المصادر",
+    "methodology": "المنهجية",
+    "api": "واجهة برمجية",
+    "about": "من نحن",
+    "browse": "تصفح",
+    "status": "حالة المنظومة",
+    "changelog": "سجل التغييرات",
+    "funding": "التمويل"
+  },
+  "footer": {
+    "data": "البيانات",
+    "data_all": "كل المؤشرات",
+    "data_sources": "المصادر",
+    "data_topics": "المواضيع",
+    "data_downloads": "تنزيلات",
+    "methodology": "المنهجية",
+    "methodology_standards": "معيار الدقة",
+    "methodology_vintage": "سياسة التاريخ المرجعي",
+    "methodology_trust": "تصنيفات الثقة",
+    "methodology_facets": "مفردات التصنيف",
+    "about": "من نحن",
+    "about_us": "من نحن",
+    "about_funding": "إفصاح عن التمويل",
+    "about_governance": "الحوكمة",
+    "about_contact": "تواصل",
+    "about_status": "حالة المنظومة",
+    "about_changelog": "سجل التغييرات",
+    "tech": "تقني",
+    "tech_api": "واجهة برمجية",
+    "tech_license": "ترخيص البيانات المفتوحة",
+    "tech_version": "الإصدار",
+    "tech_refreshed": "آخر تحديث",
+    "legal": "مَبني مستقلّة. لا تتلقى تمويلاً من أي جهة قد تكون موضوع تحقيقها.",
+    "license_short": "البيانات الوصفية الخاصة بمَبني مرخّصة وفق CC-BY-4.0. تخضع البيانات الأصلية لتراخيص ناشريها."
+  },
+  "home": {
+    "intro_heading": "نظرة مستقلّة وموثَّقة على الاقتصاد اللبناني.",
+    "intro_body": "تجمع مَبني البيانات من المؤسسات الدولية والمصارف المركزية والوزارات والأسواق في كتالوج موحَّد قابل للمقارنة — مع مرجع للمصدر على كل رقم، ومؤشر تحديث ظاهر لكل سلسلة.",
+    "indicators_heading": "المؤشرات",
+    "indicators_sub": "كل قيمة موصولة بمصدرها؛ كل سلسلة تُظهر تاريخ تحديثها.",
+    "topics_heading": "تصفح بحسب الموضوع",
+    "sources_heading": "المصادر",
+    "status_heading": "حالة الخط الإنتاجي",
+    "view_all": "عرض الكل"
+  },
+  "indicator": {
+    "definition": "التعريف",
+    "unit": "الوحدة",
+    "frequency": "الدورية",
+    "geography": "النطاق الجغرافي",
+    "trust": "تصنيف الثقة",
+    "last_updated": "آخر تحديث",
+    "next_expected": "التحديث القادم المتوقَّع",
+    "sources_count": "المصادر",
+    "methodology": "المنهجية",
+    "provenance": "المرجعية",
+    "cite_heading": "اقتباس",
+    "downloads_heading": "تنزيلات",
+    "multi_source_table": "القيم حسب المصدر",
+    "period": "الفترة",
+    "value": "القيمة",
+    "source": "المصدر",
+    "vintage": "تاريخ النشر",
+    "fetched": "تاريخ السحب",
+    "divergence": "التباين"
+  },
+  "source": {
+    "publisher": "الناشر",
+    "tier": "الفئة",
+    "license": "الترخيص",
+    "url": "الموقع",
+    "cadence": "الدورية",
+    "last_fetch": "آخر سحب ناجح",
+    "freshness": "حداثة البيانات",
+    "indicators_heading": "المؤشرات من هذا المصدر"
+  },
+  "browse": {
+    "heading": "تصفح المؤشرات",
+    "filter_topic": "الموضوع",
+    "filter_subtopic": "الموضوع الفرعي",
+    "filter_geography": "الجغرافيا",
+    "filter_frequency": "الدورية",
+    "filter_currency": "العملة المرجعية",
+    "filter_source": "المصدر",
+    "clear": "مسح",
+    "results": "النتائج",
+    "no_results": "لا توجد مؤشرات مطابقة. مفردات التصنيف منشورة — راجع المنهجية لطلب إضافة تصنيف."
+  },
+  "trust": {
+    "official": "رسمي",
+    "proxy": "بديل",
+    "modeled": "نموذجي",
+    "reference": "مرجعي"
+  },
+  "freshness": {
+    "fresh": "ضمن الجدول",
+    "due_soon": "يستحق التحديث قريباً",
+    "stale": "متأخر",
+    "no_schedule": "لا يوجد جدول دوري"
+  }
+}
