@@ -313,15 +313,15 @@ export const sources: Source[] = [
     publisher_ar: "إدارة الإحصاء المركزي — الجمهورية اللبنانية",
     tier: "T2",
     trust_label_default: "official",
-    url: "http://www.cas.gov.lb",
+    url: "http://cas.gov.lb",
     license: "Public; PDFs and Excel.",
-    cadence_en: "Monthly CPI; annual national accounts and labour surveys.",
-    cadence_ar: "رقم قياسي لأسعار المستهلك شهرياً؛ حسابات قومية ومسوحات عمل سنوياً.",
+    cadence_en: "Monthly CPI XLSX at a fully date-templated URL; published on the 1st-15th of the following month.",
+    cadence_ar: "رقم قياسي شهري لأسعار المستهلك بصيغة Excel على رابط مؤرَّخ متوقَّع تماماً؛ يُنشَر بين الأوّل والخامس عشر من الشهر التالي.",
     ingest_method_en:
-      "Phase-2 build: CPI series from monthly bulletin (AI-assisted PDF extraction). Known limitation: weights date to 2004–05 — flagged on every CPI value.",
+      "Mabii generates the URL per (year, month) → http://cas.gov.lb/images/PDFs/CPI/{YYYY}/{N}-CPI_{MONTH}{YYYY}.xlsx → downloads the XLSX → matches the 12 expenditure divisions by row label → writes one observation per category per month. No AI needed; the file is fully structured. Index base: December 2013 = 100.",
     ingest_method_ar:
-      "في المرحلة الثانية: سلسلة الرقم القياسي لأسعار المستهلك من النشرة الشهرية (استخراج مساعَد بالذكاء الاصطناعي). قيد معروف: تعود الأوزان إلى 2004–2005 — يُشار إليه على كل قيمة.",
-    ingestion_status: "pdf_ai_needed",
+      "تولّد مَبني الرابط لكل (سنة، شهر) ثم تنزّل ملف Excel وتُطابق أقسام الإنفاق الإثني عشر بالعناوين وتسجّل ملاحظة واحدة لكل فئة شهرياً. لا حاجة للذكاء الاصطناعي. الأساس: كانون الأول 2013 = 100.",
+    ingestion_status: "live",
     planned_phase: 2,
   },
   {

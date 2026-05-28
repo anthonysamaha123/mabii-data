@@ -53,6 +53,31 @@ export function formatYear(iso: string): string {
   return iso.slice(0, 4);
 }
 
+/**
+ * Format a period inclusively: monthly → "2024-05", quarterly → "2024 Q2",
+ * annual → "2024", anything else → "YYYY-MM". Uses period_start to disambiguate.
+ */
+export function formatPeriod(
+  period_start: string,
+  period_end: string,
+  frequency: string
+): string {
+  const startYear = period_start.slice(0, 4);
+  const startMonth = Number.parseInt(period_start.slice(5, 7), 10);
+  if (frequency === "annual" || frequency === "irregular") return startYear;
+  if (frequency === "monthly") {
+    return `${startYear}-${String(startMonth).padStart(2, "0")}`;
+  }
+  if (frequency === "quarterly") {
+    const q = Math.ceil(startMonth / 3);
+    return `${startYear} Q${q}`;
+  }
+  if (frequency === "weekly" || frequency === "daily") {
+    return period_start;
+  }
+  return `${startYear}-${String(startMonth).padStart(2, "0")}`;
+}
+
 export function formatPercent(value: number, locale: Locale): string {
   const bcp = locale === "ar" ? "ar-LB" : "en-US";
   const sign = value > 0 ? "+" : "";

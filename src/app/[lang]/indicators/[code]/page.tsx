@@ -11,7 +11,7 @@ import {
   getObservations,
 } from "@/data/store";
 import { facetLabel } from "@/data/catalog/facet-vocabulary";
-import { formatDate, formatNumber, formatYear } from "@/lib/format";
+import { formatDate, formatNumber, formatPeriod } from "@/lib/format";
 import { TrustBadge } from "@/components/trust-badge";
 import { Sparkline } from "@/components/sparkline";
 import { CiteThis } from "@/components/cite-this";
@@ -204,7 +204,11 @@ export default async function IndicatorDetailPage({ params }: PageProps) {
                         color: "var(--color-ink-soft)",
                       }}
                     >
-                      {formatYear(row.period_end)}
+                      {formatPeriod(
+                        row.period_start,
+                        row.period_end,
+                        ind.facets.find((f) => f.facet_type === "frequency")?.facet_value ?? "annual"
+                      )}
                     </td>
                     {sourcesUsed.map((s) => {
                       const obs = row.bySource[s.id];
