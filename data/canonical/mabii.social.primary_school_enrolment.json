@@ -1,0 +1,21 @@
+{
+  "indicator_code": "mabii.social.primary_school_enrolment",
+  "built_at": "2026-05-28T13:45:57.331Z",
+  "observations": [
+    {
+      "indicator_code": "mabii.social.primary_school_enrolment",
+      "geography_id": "LBN",
+      "period_start": "1974-01-01",
+      "period_end": "1974-12-31",
+      "frequency": "annual",
+      "value": 97.87249,
+      "unit": "%",
+      "source_id": "world-bank-wdi",
+      "raw_ref": "9dfb4c1d03ad8dcab1439f2057e985c38aa2b3d9abd1b549ad375c2a9c9684cd",
+      "trust_label": "official",
+      "extraction_method": "api",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
+      "version": 1
+    }
+  ]
+}

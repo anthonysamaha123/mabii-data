@@ -18,6 +18,9 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "topic", facet_value: "energy", label_en: "Energy", label_ar: "الطاقة" },
   { facet_type: "topic", facet_value: "real_estate", label_en: "Real estate", label_ar: "العقارات" },
   { facet_type: "topic", facet_value: "transport", label_en: "Transport & vehicles", label_ar: "النقل والمركبات" },
+  { facet_type: "topic", facet_value: "infrastructure", label_en: "Infrastructure & connectivity", label_ar: "البنى التحتية والاتّصال" },
+  { facet_type: "topic", facet_value: "social", label_en: "Social & development", label_ar: "اجتماعي وتنموي" },
+  { facet_type: "topic", facet_value: "humanitarian", label_en: "Humanitarian", label_ar: "إنساني" },
 
   // ── subtopic ─────────────────────────────────────────────────────────
   { facet_type: "subtopic", facet_value: "gdp", parent: "macro", label_en: "Gross domestic product", label_ar: "الناتج المحلي الإجمالي" },
@@ -36,6 +39,41 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "rent", parent: "real_estate", label_en: "Residential rent", label_ar: "إيجار سكني" },
   { facet_type: "subtopic", facet_value: "sale_price", parent: "real_estate", label_en: "Sale prices", label_ar: "أسعار البيع" },
   { facet_type: "subtopic", facet_value: "used_cars", parent: "transport", label_en: "Used cars", label_ar: "السيارات المستعملة" },
+  // Macro (additional)
+  { facet_type: "subtopic", facet_value: "gdp_per_capita", parent: "macro", label_en: "GDP per capita", label_ar: "نصيب الفرد من الناتج المحلي" },
+  // Monetary (additional)
+  { facet_type: "subtopic", facet_value: "money_supply", parent: "monetary", label_en: "Money supply", label_ar: "المعروض النقدي" },
+  { facet_type: "subtopic", facet_value: "lending_rate", parent: "monetary", label_en: "Lending interest rate", label_ar: "فائدة الإقراض" },
+  { facet_type: "subtopic", facet_value: "deposit_rate", parent: "monetary", label_en: "Deposit interest rate", label_ar: "فائدة الودائع" },
+  { facet_type: "subtopic", facet_value: "bank_deposits", parent: "monetary", label_en: "Bank deposits", label_ar: "ودائع المصارف" },
+  { facet_type: "subtopic", facet_value: "bank_lending", parent: "monetary", label_en: "Bank lending to private sector", label_ar: "إقراض المصارف للقطاع الخاص" },
+  // Fiscal (additional)
+  { facet_type: "subtopic", facet_value: "government_revenue", parent: "fiscal", label_en: "Government revenue", label_ar: "إيرادات الحكومة" },
+  { facet_type: "subtopic", facet_value: "government_expenditure", parent: "fiscal", label_en: "Government expenditure", label_ar: "نفقات الحكومة" },
+  { facet_type: "subtopic", facet_value: "primary_balance", parent: "fiscal", label_en: "Primary balance", label_ar: "الرصيد الأوّلي" },
+  { facet_type: "subtopic", facet_value: "tax_revenue", parent: "fiscal", label_en: "Tax revenue", label_ar: "الإيرادات الضريبية" },
+  // External (additional)
+  { facet_type: "subtopic", facet_value: "fdi", parent: "external", label_en: "Foreign direct investment", label_ar: "الاستثمار الأجنبي المباشر" },
+  { facet_type: "subtopic", facet_value: "trade_balance", parent: "trade", label_en: "Trade balance", label_ar: "الميزان التجاري" },
+  // Prices (additional)
+  { facet_type: "subtopic", facet_value: "food_prices", parent: "prices", label_en: "Food prices", label_ar: "أسعار الغذاء" },
+  // Employment (additional)
+  { facet_type: "subtopic", facet_value: "labor_force", parent: "employment", label_en: "Labour force", label_ar: "القوى العاملة" },
+  { facet_type: "subtopic", facet_value: "unemployment", parent: "employment", label_en: "Unemployment", label_ar: "البطالة" },
+  { facet_type: "subtopic", facet_value: "youth_unemployment", parent: "employment", label_en: "Youth unemployment", label_ar: "بطالة الشباب" },
+  // Demographic (additional)
+  { facet_type: "subtopic", facet_value: "population_growth", parent: "demographic", label_en: "Population growth", label_ar: "النموّ السكّاني" },
+  { facet_type: "subtopic", facet_value: "age_dependency", parent: "demographic", label_en: "Age dependency ratio", label_ar: "نسبة الإعالة" },
+  { facet_type: "subtopic", facet_value: "urban_population", parent: "demographic", label_en: "Urban population share", label_ar: "حصّة السكان في المدن" },
+  // Infrastructure
+  { facet_type: "subtopic", facet_value: "electricity_use", parent: "infrastructure", label_en: "Electricity use per capita", label_ar: "استهلاك الكهرباء للفرد" },
+  { facet_type: "subtopic", facet_value: "internet_use", parent: "infrastructure", label_en: "Internet users", label_ar: "مستخدمو الإنترنت" },
+  { facet_type: "subtopic", facet_value: "mobile_subscriptions", parent: "infrastructure", label_en: "Mobile subscriptions", label_ar: "اشتراكات الهاتف المحمول" },
+  // Social
+  { facet_type: "subtopic", facet_value: "life_expectancy", parent: "social", label_en: "Life expectancy at birth", label_ar: "متوسّط العمر المتوقّع عند الولادة" },
+  { facet_type: "subtopic", facet_value: "schooling", parent: "social", label_en: "School enrolment", label_ar: "الالتحاق بالمدارس" },
+  // Humanitarian
+  { facet_type: "subtopic", facet_value: "refugees", parent: "humanitarian", label_en: "Registered refugees", label_ar: "اللاجئون المسجّلون" },
 
   // ── frequency ────────────────────────────────────────────────────────
   { facet_type: "frequency", facet_value: "daily", label_en: "Daily", label_ar: "يومية" },

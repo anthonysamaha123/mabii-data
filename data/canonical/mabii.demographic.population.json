@@ -1,6 +1,6 @@
 {
   "indicator_code": "mabii.demographic.population",
-  "built_at": "2026-05-28T11:42:17.564Z",
+  "built_at": "2026-05-28T13:47:34.153Z",
   "observations": [
     {
       "indicator_code": "mabii.demographic.population",
@@ -14,7 +14,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -29,7 +29,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -44,7 +44,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -59,7 +59,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -74,7 +74,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -89,7 +89,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -104,7 +104,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -119,7 +119,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -134,7 +134,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -149,7 +149,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -164,7 +164,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -179,7 +179,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -194,7 +194,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -209,7 +209,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -224,7 +224,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -239,7 +239,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -254,7 +254,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -269,7 +269,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -284,7 +284,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -299,7 +299,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -314,7 +314,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -330,7 +330,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -345,7 +345,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -361,7 +361,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -376,7 +376,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -392,7 +392,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -407,7 +407,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -423,7 +423,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -438,7 +438,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -454,7 +454,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -469,7 +469,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -485,7 +485,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -500,7 +500,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -516,7 +516,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -531,7 +531,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -547,7 +547,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -562,7 +562,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -578,7 +578,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -593,7 +593,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -609,7 +609,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -624,7 +624,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -640,7 +640,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -655,7 +655,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -671,7 +671,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -686,7 +686,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -702,7 +702,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -717,7 +717,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -733,7 +733,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -748,7 +748,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -764,7 +764,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -779,7 +779,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -795,7 +795,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -810,7 +810,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -826,7 +826,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -841,7 +841,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -857,7 +857,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -872,7 +872,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -888,7 +888,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -903,7 +903,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -919,7 +919,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -934,7 +934,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -950,7 +950,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -965,7 +965,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -981,7 +981,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -996,7 +996,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1012,7 +1012,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1027,7 +1027,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1043,7 +1043,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1058,7 +1058,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1074,7 +1074,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1089,7 +1089,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1105,7 +1105,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1120,7 +1120,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1136,7 +1136,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1151,7 +1151,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1167,7 +1167,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1182,7 +1182,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1198,7 +1198,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1213,7 +1213,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1229,7 +1229,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1244,7 +1244,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1260,7 +1260,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1275,7 +1275,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1291,7 +1291,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1306,7 +1306,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1322,7 +1322,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1337,7 +1337,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1353,7 +1353,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1368,7 +1368,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1384,7 +1384,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1399,7 +1399,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1415,7 +1415,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1430,7 +1430,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1446,7 +1446,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1461,7 +1461,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1477,7 +1477,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1492,7 +1492,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1508,7 +1508,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1523,7 +1523,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1539,7 +1539,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1554,7 +1554,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1570,7 +1570,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1585,7 +1585,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1601,7 +1601,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1616,7 +1616,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1632,7 +1632,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1647,7 +1647,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1663,7 +1663,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1678,7 +1678,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     },
@@ -1694,7 +1694,7 @@
       "raw_ref": "e23366bf794e3b50accf71eecaf294d3659d7a21640ac457aefa7d51bea54fd2",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T11:42:05.026Z",
+      "fetched_at": "2026-05-28T13:45:40.686Z",
       "version": 1
     },
     {
@@ -1709,7 +1709,7 @@
       "raw_ref": "9988245413b8f1305338a5a3625ccc1a4005c5544985544bc768c339de84e552",
       "trust_label": "official",
       "extraction_method": "api",
-      "fetched_at": "2026-05-28T10:37:25.755Z",
+      "fetched_at": "2026-05-28T13:47:05.249Z",
       "version": 1,
       "method_note": "IMF WEO reports LP in millions; converted to absolute persons for storage."
     }

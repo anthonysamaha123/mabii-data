@@ -15,6 +15,7 @@
     "fetch:imf": "tsx scripts/connectors/imf.ts",
     "fetch:comtrade": "tsx scripts/connectors/comtrade.ts",
     "fetch:fred": "tsx scripts/connectors/fred.ts",
+    "fetch:hdx": "tsx scripts/connectors/hdx.ts",
     "schedule:check": "tsx scripts/scheduler/check.ts",
     "schedule:run": "tsx scripts/scheduler/run.ts",
     "schedule:run:force": "tsx scripts/scheduler/run.ts --force",
@@ -22,13 +23,17 @@
   },
   "dependencies": {
     "next": "16.2.3",
+    "openai": "^6.34.0",
+    "pdf-parse": "^1.1.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "server-only": "^0.0.1"
+    "server-only": "^0.0.1",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
