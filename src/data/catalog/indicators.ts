@@ -2271,6 +2271,158 @@ export const indicators: Indicator[] = [
     notes_ar: "تسجيل UNHCR هو أكبر عَدّ علني متاح، لكنه يُقلِّل من تقدير اللاجئين الفلسطينيين (الخاضعين لولاية الأونروا، بيانات منفصلة).",
   },
 
+  // ─── Affordability / cost of living (WFP + reference + derived) ──────
+  {
+    code: "mabii.prices.food_basket_usd",
+    name_en: "Essential food basket — cost (USD)",
+    name_ar: "سلّة الغذاء الأساسية — الكلفة (دولار)",
+    definition_en:
+      "Cost of one pack each of 10 essential staples (pita bread, rice, bulgur, pasta, lentils, chickpeas, sunflower oil 5L, white sugar 5kg, eggs ×30, powdered milk), by governorate, monthly. Priced from WFP market monitoring; USD at the unofficial (parallel-market) exchange rate. A transparent reference basket, not a calorie-calibrated survival minimum.",
+    definition_ar:
+      "كلفة عبوة واحدة من كلٍّ من 10 مواد أساسية (خبز، أرزّ، برغل، معكرونة، عدس، حمّص، زيت دوّار 5 ل، سكر 5 كغ، بيض ×30، حليب بودرة)، حسب المحافظة، شهرياً. مُسعَّرة من رصد أسواق برنامج الأغذية العالمي؛ بالدولار وفق سعر السوق الموازية. سلّة مرجعية شفّافة لا حدّ كفاف بالسعرات.",
+    default_unit: "USD",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "prices" },
+      { facet_type: "subtopic", facet_value: "food_basket" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "governorate" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "wfp",
+        source_native_code: "basket.essential_staples",
+        comparability: "direct",
+        reconciliation_notes:
+          "Sum of one unit of each of 10 staples from WFP market data; USD at WFP unofficial FX. fx_basis = unofficial parallel rate.",
+        schedule: { cadence: "monthly", release_day_of_month: 20, grace_days: 40 },
+      },
+    ],
+    notes_en:
+      "USD figures use the unofficial (parallel) exchange rate — what people actually pay — not the dead 1,507.5 peg. Coverage: all 8 governorates, 2012→present.",
+    notes_ar:
+      "أرقام الدولار بسعر السوق الموازية — ما يدفعه الناس فعلاً — لا بربط 1507.5 المنهار. التغطية: المحافظات الثماني، 2012 حتى الآن.",
+  },
+  {
+    code: "mabii.prices.food_basket_lbp",
+    name_en: "Essential food basket — cost (LBP, nominal)",
+    name_ar: "سلّة الغذاء الأساسية — الكلفة (ليرة، اسمية)",
+    definition_en:
+      "Same 10-staple basket as the USD version, summed from WFP's raw nominal LBP prices — the actual transacted price. Pure nominal: shows the raw inflation of the pound, and is the FX-independent basis for the affordability ratio.",
+    definition_ar:
+      "السلّة نفسها (10 مواد) لكن مجموعة من أسعار الليرة الاسمية الخام من برنامج الأغذية — السعر الفعلي المدفوع. اسمية بحتة: تُظهر تضخّم الليرة الخام، وهي الأساس المستقلّ عن سعر الصرف لنسبة القدرة الشرائية.",
+    default_unit: "LBP",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "prices" },
+      { facet_type: "subtopic", facet_value: "food_basket" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "governorate" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "wfp",
+        source_native_code: "basket.essential_staples_lbp",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 20, grace_days: 40 },
+      },
+    ],
+  },
+  {
+    code: "mabii.monetary.parallel_exchange_rate_lbp",
+    name_en: "Exchange rate — unofficial / parallel (LBP per USD)",
+    name_ar: "سعر الصرف — غير الرسمي / السوق الموازية (ليرة لكل دولار)",
+    definition_en:
+      "Unofficial (parallel-market) Lebanese pound per US dollar, as recorded in WFP market monitoring. The rate at which most transactions actually clear since 2019, versus the defunct 1,507.5 official peg.",
+    definition_ar:
+      "سعر صرف الليرة مقابل الدولار في السوق الموازية كما يسجّله رصد برنامج الأغذية العالمي. السعر الذي تُنفَّذ به معظم المعاملات منذ 2019، مقابل الربط الرسمي المنهار 1507.5.",
+    default_unit: "LBP",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "monetary" },
+      { facet_type: "subtopic", facet_value: "fx" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "lbp" },
+      { facet_type: "geography_level", facet_value: "country" },
+    ],
+    sources: [
+      {
+        source_id: "wfp",
+        source_native_code: "exchange_rate.unofficial",
+        comparability: "direct",
+        schedule: { cadence: "monthly", release_day_of_month: 20, grace_days: 40 },
+      },
+    ],
+    notes_en: "Pre-2019 this equalled the 1,507.5 peg; afterward it diverged massively (now ~89,700).",
+    notes_ar: "قبل 2019 كان يساوي الربط 1507.5؛ ثم تباعد بشدّة (نحو 89,700 حالياً).",
+  },
+  {
+    code: "mabii.employment.minimum_wage_usd",
+    name_en: "Monthly minimum wage (USD, parallel rate)",
+    name_ar: "الحد الأدنى الشهري للأجور (دولار، السعر الموازي)",
+    definition_en:
+      "Official Lebanese monthly minimum wage set by government decree, converted to USD at the unofficial (parallel) exchange rate of the period. Shows the real collapse: the same nominal wage that was worth ~$450 pre-2019 fell below $30 at the trough before nominal hikes.",
+    definition_ar:
+      "الحد الأدنى الرسمي الشهري للأجور بمرسوم حكومي، محوَّلاً إلى الدولار بسعر السوق الموازية للفترة. يُظهر الانهيار الحقيقي: الأجر نفسه الذي كان يساوي ~450 دولاراً قبل 2019 هبط دون 30 دولاراً في القاع قبل الزيادات الاسمية.",
+    default_unit: "USD",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "employment" },
+      { facet_type: "subtopic", facet_value: "minimum_wage" },
+      { facet_type: "frequency", facet_value: "irregular" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "country" },
+    ],
+    sources: [
+      {
+        source_id: "mabii-reference",
+        source_native_code: "minimum_wage.decree",
+        comparability: "direct",
+        reconciliation_notes:
+          "Decree nominal LBP values, cited, converted at the parallel rate. fx_basis = unofficial parallel rate.",
+      },
+    ],
+    notes_en:
+      "Reference series, hand-entered from official decrees with citations. Nominal LBP figures: 675,000 (2012–2023); 9,000,000 (2023); 18,000,000 (2024).",
+    notes_ar:
+      "سلسلة مرجعية مُدخَلة من المراسيم الرسمية مع مصادرها. القيم الاسمية بالليرة: 675,000 (2012–2023)؛ 9,000,000 (2023)؛ 18,000,000 (2024).",
+  },
+  {
+    code: "mabii.social.food_basket_pct_min_wage",
+    name_en: "Food basket as % of the monthly minimum wage",
+    name_ar: "سلّة الغذاء كنسبة من الحد الأدنى الشهري للأجور",
+    definition_en:
+      "DERIVED. The essential food basket cost divided by the monthly minimum wage, per governorate — the share of an entire month's minimum wage consumed by one grocery run of staples. Both inputs in USD at the parallel rate. The single clearest measure of the affordability collapse.",
+    definition_ar:
+      "مؤشر مُشتقّ. كلفة سلّة الغذاء الأساسية مقسومة على الحد الأدنى الشهري للأجور، حسب المحافظة — حصّة أجر شهر كامل التي تلتهمها مشترَيات أساسية واحدة. كلا المدخلين بالدولار بالسعر الموازي. أوضح مقياس لانهيار القدرة الشرائية.",
+    default_unit: "%",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "social" },
+      { facet_type: "subtopic", facet_value: "affordability" },
+      { facet_type: "frequency", facet_value: "monthly" },
+      { facet_type: "currency_basis", facet_value: "percent" },
+      { facet_type: "geography_level", facet_value: "governorate" },
+    ],
+    sources: [
+      {
+        source_id: "mabii-reference",
+        source_native_code: "derived.food_basket_pct_min_wage",
+        comparability: "direct",
+        reconciliation_notes:
+          "Derived = food_basket_lbp ÷ minimum_wage_lbp × 100 — computed in pounds so it is FX-independent (no 'which dollar' ambiguity). scripts/derive/affordability.ts. Trust inherits the weakest input (modeled).",
+        schedule: { cadence: "monthly", release_day_of_month: 21, grace_days: 40 },
+      },
+    ],
+    notes_en:
+      "Mabii-derived (SPEC Layer 3). Recomputed whenever either input refreshes. Trust 'modeled'.",
+    notes_ar: "مُشتقّ من مَبني (الطبقة الثالثة). يُعاد حسابه عند تحديث أيّ مُدخَل. تصنيف ‘نموذجي’.",
+  },
+
   {
     code: "mabii.real_estate.rent_median_usd",
     name_en: "Residential rent — median asking price (USD/month)",

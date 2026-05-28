@@ -108,6 +108,43 @@ export const sources: Source[] = [
     planned_phase: 2,
   },
   {
+    id: "wfp",
+    name_en: "WFP — Food Prices (VAM)",
+    name_ar: "برنامج الأغذية العالمي — أسعار الغذاء",
+    publisher_en: "World Food Programme (via HDX)",
+    publisher_ar: "برنامج الأغذية العالمي (عبر HDX)",
+    tier: "T1",
+    trust_label_default: "proxy",
+    url: "https://data.humdata.org/dataset/wfp-food-prices-for-lebanon",
+    license: "CC-BY-IGO (HDX). Open for reuse.",
+    cadence_en: "Monthly market price monitoring; ~14-year history per governorate.",
+    cadence_ar: "رصد شهري لأسعار الأسواق؛ تاريخ يمتدّ نحو 14 عاماً لكل محافظة.",
+    ingest_method_en:
+      "Mabii pulls the WFP food-price CSV from HDX and aggregates a transparent essential-staples basket per governorate. USD values are at WFP's UNOFFICIAL (parallel-market) exchange rate — the rate people actually transact at — which is itself published as an indicator. Trust 'proxy': monitored markets, not a full consumption survey.",
+    ingest_method_ar:
+      "تسحب مَبني ملف أسعار الغذاء من HDX وتُجمِّع سلّة مواد أساسية شفّافة لكل محافظة. القيم بالدولار محسوبة بسعر الصرف غير الرسمي (السوق الموازية) — السعر الذي يتعامل به الناس فعلاً — وهو منشور كمؤشر مستقل. تصنيف ‘بديل’: أسواق مرصودة لا مسح استهلاكي كامل.",
+    ingestion_status: "live",
+    planned_phase: 2,
+  },
+  {
+    id: "mabii-reference",
+    name_en: "Mabii — Cited reference constants",
+    name_ar: "مَبني — ثوابت مرجعية موثَّقة",
+    publisher_en: "Mabii (compiled from official decrees & cited sources)",
+    publisher_ar: "مَبني (مجمَّعة من المراسيم الرسمية ومصادر موثَّقة)",
+    tier: "T4",
+    trust_label_default: "reference",
+    url: "https://mabii.org/methodology",
+    license: "CC-BY-4.0.",
+    cadence_en: "Slow-moving constants (e.g. minimum wage) updated when the underlying decree changes.",
+    cadence_ar: "ثوابت بطيئة التغيّر (مثل الحد الأدنى للأجور) تُحدَّث عند تغيّر المرسوم.",
+    ingest_method_en:
+      "Hand-entered reference values, each with a citation and date, for figures that have no API (minimum wage, etc.). Trust 'reference'.",
+    ingest_method_ar:
+      "قيم مرجعية مُدخَلة يدوياً، كلٌّ مع مصدرها وتاريخها، للأرقام التي لا واجهة لها (الحد الأدنى للأجور…). تصنيف ‘مرجعي’.",
+    ingestion_status: "live",
+  },
+  {
     id: "hdx",
     name_en: "HDX / UNHCR — Population Statistics",
     name_ar: "HDX / UNHCR — إحصاءات السكان",

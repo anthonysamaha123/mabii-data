@@ -79,6 +79,10 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "schooling", parent: "social", label_en: "School enrolment", label_ar: "الالتحاق بالمدارس" },
   // Humanitarian
   { facet_type: "subtopic", facet_value: "refugees", parent: "humanitarian", label_en: "Registered refugees", label_ar: "اللاجئون المسجّلون" },
+  // Affordability / cost of living
+  { facet_type: "subtopic", facet_value: "food_basket", parent: "prices", label_en: "Food basket cost", label_ar: "كلفة سلّة الغذاء" },
+  { facet_type: "subtopic", facet_value: "minimum_wage", parent: "employment", label_en: "Minimum wage", label_ar: "الحد الأدنى للأجور" },
+  { facet_type: "subtopic", facet_value: "affordability", parent: "social", label_en: "Affordability", label_ar: "القدرة على تحمّل الكلفة" },
   // Governance
   { facet_type: "subtopic", facet_value: "corruption", parent: "governance", label_en: "Corruption control", label_ar: "مكافحة الفساد" },
   { facet_type: "subtopic", facet_value: "rule_of_law", parent: "governance", label_en: "Rule of law", label_ar: "سيادة القانون" },
