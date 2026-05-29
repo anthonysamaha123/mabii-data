@@ -45,6 +45,7 @@ const LABELS: Record<Locale, SurveyLabels> = {
       "You answered {n} questions. In the live version these would join your governorate's monthly statistics — aggregated, never shown individually. For now, nothing was stored.",
     done_again: "Fill it again",
     optional: "optional",
+    error_prefix: "Could not submit",
   },
   ar: {
     preview_banner:
@@ -66,6 +67,7 @@ const LABELS: Record<Locale, SurveyLabels> = {
       "أجبت على {n} سؤالاً. في النسخة الحيّة ستنضمّ إلى إحصاءات محافظتك الشهرية — مُجمَّعة، لا تُعرَض فردياً أبداً. حالياً لم يُحفَظ أي شيء.",
     done_again: "املأ النموذج مجدّداً",
     optional: "اختياري",
+    error_prefix: "تعذّر الإرسال",
   },
 };
 
@@ -86,17 +88,21 @@ export default async function ContributePage({
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
 
-  const week = isoWeek(new Date());
+  const now = new Date();
+  const week = isoWeek(now);
+  const wave = `${now.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
   const personModule = moduleForWeek("person", week);
   const businessModule = moduleForWeek("business", week);
 
   const person = {
     ...questionsFor("person", personModule),
     moduleLabel: MODULE_LABEL[lang][personModule] ?? personModule,
+    wave,
   };
   const business = {
     ...questionsFor("business", businessModule),
     moduleLabel: MODULE_LABEL[lang][businessModule] ?? businessModule,
+    wave,
   };
 
   return (

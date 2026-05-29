@@ -22,3 +22,9 @@ logs
 # Raw fetches are committed for audit trail; transient cache is not
 data/cache
 data/.tmp
+
+# Survey submissions are private (anonymized aggregates are published separately)
+data/survey/submissions
+data/survey/dedup
+data/survey/velocity.json
+data/survey/aggregates

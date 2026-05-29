@@ -1,7 +1,12 @@
 // Canonical data model — TypeScript mirror of SPEC §6.
 // When this graduates to Postgres, the same field names map 1:1 to columns.
 
-export type TrustLabel = "official" | "proxy" | "modeled" | "reference";
+export type TrustLabel =
+  | "official"
+  | "proxy"
+  | "modeled"
+  | "reference"
+  | "self_reported";
 
 export type ExtractionMethod =
   | "api"

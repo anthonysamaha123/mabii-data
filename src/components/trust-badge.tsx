@@ -6,6 +6,7 @@ const styleFor: Record<TrustLabel, { color: string; bg: string }> = {
   proxy: { color: "var(--color-ink)", bg: "#e9e4d6" },
   modeled: { color: "var(--color-flag-low-conf)", bg: "#f5e8cc" },
   reference: { color: "var(--color-ink-mute)", bg: "var(--color-rule-soft)" },
+  self_reported: { color: "var(--color-accent)", bg: "#e6ecf5" },
 };
 
 export function TrustBadge({

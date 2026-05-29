@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Locale } from "@/lib/i18n/dictionaries";
 import type { Respondent, SurveyQuestion } from "@/data/survey/questions";
 
@@ -9,6 +9,7 @@ interface Bundle {
   core: SurveyQuestion[];
   module: SurveyQuestion[];
   moduleLabel: string;
+  wave: string;
 }
 
 export interface SurveyLabels {
@@ -28,6 +29,7 @@ export interface SurveyLabels {
   done_body: string;
   done_again: string;
   optional: string;
+  error_prefix: string;
 }
 
 export function SurveyForm({
@@ -44,6 +46,25 @@ export function SurveyForm({
   const [phase, setPhase] = useState<"choose" | "form" | "done">("choose");
   const [respondent, setRespondent] = useState<Respondent>("person");
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [token, setToken] = useState<string>("");
+  const [hp, setHp] = useState<string>(""); // honeypot — stays empty for humans
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // Fetch a fresh timing token whenever the form opens.
+  useEffect(() => {
+    if (phase !== "form") return;
+    let cancelled = false;
+    fetch("/api/v1/survey/token")
+      .then((r) => r.json())
+      .then((d) => {
+        if (!cancelled) setToken(d.token ?? "");
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [phase]);
 
   const bundle = respondent === "person" ? person : business;
   const allQ = useMemo(
@@ -55,11 +76,35 @@ export function SurveyForm({
   function pick(respondentChoice: Respondent) {
     setRespondent(respondentChoice);
     setAnswers({});
+    setSubmitError(null);
     setPhase("form");
   }
 
   function setAnswer(id: string, value: string) {
     setAnswers((a) => ({ ...a, [id]: value }));
+  }
+
+  async function submit() {
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/v1/survey", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ respondent, wave: bundle.wave, answers, token, hp }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        setPhase("done");
+      } else {
+        // Honest: surface the rejection reason (rate-limited, already submitted, too fast…)
+        setSubmitError(data.reason ?? "error");
+      }
+    } catch {
+      setSubmitError("network");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   // ── choose ──
@@ -150,21 +195,38 @@ export function SurveyForm({
         ))}
       </Section>
 
+      {/* honeypot — visually hidden, off-screen; bots fill it, humans don't */}
+      <input
+        type="text"
+        name="company_website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={hp}
+        onChange={(e) => setHp(e.target.value)}
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
+
       <button
-        onClick={() => setPhase("done")}
-        disabled={answeredCount === 0}
+        onClick={submit}
+        disabled={answeredCount === 0 || submitting}
         className="mt-4 px-5 py-2.5 text-sm"
         style={{
-          background: answeredCount === 0 ? "var(--color-rule)" : "var(--color-accent)",
+          background: answeredCount === 0 || submitting ? "var(--color-rule)" : "var(--color-accent)",
           color: "#fff",
           border: "none",
-          cursor: answeredCount === 0 ? "not-allowed" : "pointer",
+          cursor: answeredCount === 0 || submitting ? "not-allowed" : "pointer",
           fontFamily: "var(--font-sans)",
           fontWeight: 500,
         }}
       >
-        {labels.submit}
+        {submitting ? "…" : labels.submit}
       </button>
+      {submitError && (
+        <p className="mt-3 text-sm" style={{ color: "var(--color-flag-stale)", fontFamily: "var(--font-sans)" }}>
+          {labels.error_prefix}: {submitError}
+        </p>
+      )}
     </Shell>
   );
 }

@@ -29,6 +29,8 @@
     "fetch:wfp": "tsx scripts/connectors/wfp.ts",
     "fetch:reference": "tsx scripts/connectors/reference.ts",
     "derive:affordability": "tsx scripts/derive/affordability.ts",
+    "survey:aggregate": "tsx scripts/derive/survey-aggregate.ts",
+    "survey:seed-synthetic": "tsx scripts/survey/seed-synthetic.ts",
     "schedule:check": "tsx scripts/scheduler/check.ts",
     "schedule:run": "tsx scripts/scheduler/run.ts",
     "schedule:run:force": "tsx scripts/scheduler/run.ts --force",
