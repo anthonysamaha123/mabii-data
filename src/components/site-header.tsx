@@ -11,13 +11,14 @@ export function SiteHeader({
   dict: Dictionary;
   pathname: string;
 }) {
-  const navItems = [
+  const navItems: Array<{ href: string; label: string; cta?: boolean }> = [
     { href: `/${locale}/indicators`, label: dict.nav.data },
     { href: `/${locale}/topics`, label: dict.nav.topics },
     { href: `/${locale}/sources`, label: dict.nav.sources },
     { href: `/${locale}/methodology`, label: dict.nav.methodology },
     { href: `/${locale}/api`, label: dict.nav.api },
     { href: `/${locale}/about`, label: dict.nav.about },
+    { href: `/${locale}/contribute`, label: dict.nav.contribute, cta: true },
   ];
 
   return (
@@ -54,6 +55,22 @@ export function SiteHeader({
         >
           {navItems.map((item) => {
             const active = pathname.startsWith(item.href);
+            if (item.cta) {
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="ml-1 px-3 py-1.5 no-underline"
+                  style={{
+                    background: active ? "var(--color-accent-soft)" : "var(--color-accent)",
+                    color: "#fff",
+                    fontWeight: 500,
+                  }}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
             return (
               <Link
                 key={item.href}
