@@ -117,10 +117,89 @@ class FileSurveyStore implements SurveyStore {
   }
 }
 
+// ── Supabase/Postgres adapter ────────────────────────────────────────
+// Active when SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY are set (production).
+// Uses the service role (server-side only) which bypasses RLS — the tables
+// have no public write policies, so only this path can write.
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+
+class PgSurveyStore implements SurveyStore {
+  private sb: SupabaseClient;
+  constructor(url: string, serviceKey: string) {
+    this.sb = createClient(url, serviceKey, { auth: { persistSession: false } });
+  }
+
+  async recordDedup(wave: string, dedupHash: string): Promise<boolean> {
+    const { error } = await this.sb
+      .from("survey_dedup")
+      .insert({ wave, dedup_hash: dedupHash });
+    if (!error) return true;
+    if (error.code === "23505") return false; // unique violation = already seen
+    throw new Error(`dedup insert failed: ${error.message}`);
+  }
+
+  async ipVelocity(ipHash: string, windowMs: number): Promise<number> {
+    const since = new Date(Date.now() - windowMs).toISOString();
+    const { count, error } = await this.sb
+      .from("survey_velocity")
+      .select("*", { count: "exact", head: true })
+      .eq("ip_hash", ipHash)
+      .gte("ts", since);
+    if (error) throw new Error(`velocity query failed: ${error.message}`);
+    return count ?? 0;
+  }
+
+  async noteIp(ipHash: string): Promise<void> {
+    await this.sb.from("survey_velocity").insert({ ip_hash: ipHash });
+  }
+
+  async saveSubmission(rec: SubmissionRecord): Promise<void> {
+    const { error } = await this.sb.from("survey_submission").insert({
+      id: rec.id,
+      wave: rec.wave,
+      respondent: rec.respondent,
+      governorate: rec.governorate,
+      anchors: rec.anchors,
+      module_id: rec.module_id,
+      answers: rec.answers,
+      integrity: rec.integrity,
+      submitted_at: rec.submitted_at,
+    });
+    if (error) throw new Error(`submission insert failed: ${error.message}`);
+  }
+
+  async loadSubmissions(wave?: string): Promise<SubmissionRecord[]> {
+    let q = this.sb.from("survey_submission").select("*");
+    if (wave) q = q.eq("wave", wave);
+    const { data, error } = await q;
+    if (error) throw new Error(`submission load failed: ${error.message}`);
+    return (data ?? []).map((r) => ({
+      id: r.id,
+      wave: r.wave,
+      respondent: r.respondent,
+      governorate: r.governorate,
+      anchors: r.anchors ?? {},
+      module_id: r.module_id ?? "core",
+      answers: r.answers ?? {},
+      submitted_at: r.submitted_at,
+      integrity: r.integrity ?? {},
+    }));
+  }
+}
+
 let _store: SurveyStore | null = null;
 
 export function getSurveyStore(): SurveyStore {
-  // Future: if (process.env.DATABASE_URL) return new PgSurveyStore();
-  if (!_store) _store = new FileSurveyStore();
+  if (_store) return _store;
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  _store = url && key ? new PgSurveyStore(url, key) : new FileSurveyStore();
   return _store;
+}
+
+/** Which backend is active — for /status + ops visibility. */
+export function activeStoreKind(): "postgres" | "file" {
+  return process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY
+    ? "postgres"
+    : "file";
 }

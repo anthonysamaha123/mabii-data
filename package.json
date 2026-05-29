@@ -37,6 +37,7 @@
     "schedule:run:dry": "tsx scripts/scheduler/run.ts --dry-run"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
     "fast-xml-parser": "^5.8.0",
     "fflate": "^0.8.3",
     "next": "16.2.3",
