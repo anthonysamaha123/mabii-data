@@ -108,6 +108,25 @@ export const sources: Source[] = [
     planned_phase: 2,
   },
   {
+    id: "world-bank-data360",
+    name_en: "World Bank Data360",
+    name_ar: "البنك الدولي — Data360",
+    publisher_en: "World Bank Group (Data360 platform)",
+    publisher_ar: "مجموعة البنك الدولي (منصّة Data360)",
+    tier: "T1",
+    trust_label_default: "official",
+    url: "https://data360.worldbank.org",
+    license: "CC-BY-4.0 (World Bank Open Data) and source-specific for aggregated databases.",
+    cadence_en: "Per underlying database; mostly annual.",
+    cadence_ar: "بحسب قاعدة البيانات الأصلية؛ معظمها سنوي.",
+    ingest_method_en:
+      "One connector for the entire Data360 platform — WDI (1,486 indicators), IMF WEO, Health (HNP), Gender, Education and more — via a uniform SDMX API, no key. Each indicator is a 'DATABASE:INDICATOR' mapping; adding a new one is a one-line catalog entry. Headline (total) slice only; disaggregated series are separate indicators.",
+    ingest_method_ar:
+      "موصِل واحد لكامل منصّة Data360 — مؤشرات التنمية (1486)، وآفاق الاقتصاد لصندوق النقد، والصحة، والنوع الاجتماعي، والتعليم وغيرها — عبر واجهة SDMX موحَّدة بلا مفتاح. كل مؤشر هو ربط 'قاعدة:مؤشر'، وإضافة مؤشر جديد سطر واحد في الكتالوج.",
+    ingestion_status: "live",
+    planned_phase: 1,
+  },
+  {
     id: "wfp",
     name_en: "WFP — Food Prices (VAM)",
     name_ar: "برنامج الأغذية العالمي — أسعار الغذاء",

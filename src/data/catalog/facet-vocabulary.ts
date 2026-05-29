@@ -47,6 +47,9 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "used_cars", parent: "transport", label_en: "Used cars", label_ar: "السيارات المستعملة" },
   // Macro (additional)
   { facet_type: "subtopic", facet_value: "gdp_per_capita", parent: "macro", label_en: "GDP per capita", label_ar: "نصيب الفرد من الناتج المحلي" },
+  { facet_type: "subtopic", facet_value: "sector_value_added", parent: "macro", label_en: "Sector value added", label_ar: "القيمة المضافة القطاعية" },
+  { facet_type: "subtopic", facet_value: "investment", parent: "macro", label_en: "Investment (capital formation)", label_ar: "الاستثمار (تكوين رأس المال)" },
+  { facet_type: "subtopic", facet_value: "representation", parent: "governance", label_en: "Political representation", label_ar: "التمثيل السياسي" },
   // Monetary (additional)
   { facet_type: "subtopic", facet_value: "money_supply", parent: "monetary", label_en: "Money supply", label_ar: "المعروض النقدي" },
   { facet_type: "subtopic", facet_value: "lending_rate", parent: "monetary", label_en: "Lending interest rate", label_ar: "فائدة الإقراض" },
