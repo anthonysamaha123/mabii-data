@@ -7,12 +7,22 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { surveyQuestions, type Respondent } from "../../src/data/survey/questions";
+import { loadEnvLocal } from "../lib/load-env";
+
+loadEnvLocal();
 
 const ROOT = path.join(process.cwd(), "data", "survey");
 const SUB_DIR = path.join(ROOT, "submissions");
 const OUT_DIR = path.join(ROOT, "aggregates");
 const N_MIN = 30; // minimum cell size to publish
+
+// Postgres is the source of truth when configured; otherwise read/write files.
+const SB_URL = process.env.SUPABASE_URL;
+const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const pg: SupabaseClient | null =
+  SB_URL && SB_KEY ? createClient(SB_URL, SB_KEY, { auth: { persistSession: false } }) : null;
 
 // Governorate resident population (reference estimates, OCHA/CAS order of magnitude).
 const GOV_POP: Record<string, number> = {
@@ -42,6 +52,16 @@ function wilson(p: number, n: number): [number, number] {
 }
 
 async function readWave(wave: string): Promise<Sub[]> {
+  // Postgres is the source of truth when configured.
+  if (pg) {
+    const { data, error } = await pg
+      .from("survey_submission")
+      .select("respondent,governorate,answers")
+      .eq("wave", wave);
+    if (error) throw new Error(`PG read failed: ${error.message}`);
+    return (data ?? []) as Sub[];
+  }
+  // file fallback (local dev)
   const f = path.join(SUB_DIR, `${wave}.jsonl`);
   let text = "";
   try {
@@ -153,6 +173,25 @@ async function run() {
     }
   }
 
+  // Write aggregates to Postgres (public-readable via RLS) when configured.
+  if (pg && cells.length > 0) {
+    const rows = cells.map((c) => ({
+      wave,
+      question_id: c.question_id,
+      respondent: c.respondent,
+      segment_type: c.segment_type,
+      segment: c.segment,
+      n: c.n,
+      options: c.options,
+    }));
+    const { error } = await pg
+      .from("survey_aggregate")
+      .upsert(rows, { onConflict: "wave,question_id,respondent,segment_type,segment" });
+    if (error) throw new Error(`PG aggregate upsert failed: ${error.message}`);
+    console.log(`[survey-aggregate] upserted ${rows.length} cells to Postgres`);
+  }
+
+  // Always also write a local JSON snapshot for inspection.
   await fs.mkdir(OUT_DIR, { recursive: true });
   const outFile = path.join(OUT_DIR, `${wave}.json`);
   const payload = {
@@ -160,12 +199,13 @@ async function run() {
     generated_at: new Date().toISOString(),
     submissions: subs.length,
     n_min: N_MIN,
+    source: pg ? "postgres" : "file",
     method: "Proportions with Wilson 95% CI per governorate; national = population-weighted roll-up. Cells < n_min suppressed.",
     cells,
   };
   await fs.writeFile(outFile, JSON.stringify(payload, null, 2), "utf-8");
 
-  console.log(`[survey-aggregate] wave ${wave}: ${subs.length} submissions → ${cells.length} published cells (n_min=${N_MIN})`);
+  console.log(`[survey-aggregate] wave ${wave} (${pg ? "postgres" : "file"}): ${subs.length} submissions → ${cells.length} published cells (n_min=${N_MIN})`);
   // print a couple of national headlines
   for (const c of cells.filter((x) => x.segment_type === "national").slice(0, 6)) {
     const top = c.options.filter((o) => o.proportion > 0).map((o) => `${o.value} ${o.proportion}%`).join(", ");
