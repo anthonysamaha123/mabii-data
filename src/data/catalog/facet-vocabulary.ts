@@ -43,6 +43,7 @@ export const facetVocabulary: FacetVocabularyEntry[] = [
   { facet_type: "subtopic", facet_value: "population", parent: "demographic", label_en: "Population", label_ar: "عدد السكان" },
   { facet_type: "subtopic", facet_value: "rent", parent: "real_estate", label_en: "Residential rent", label_ar: "إيجار سكني" },
   { facet_type: "subtopic", facet_value: "sale_price", parent: "real_estate", label_en: "Sale prices", label_ar: "أسعار البيع" },
+  { facet_type: "subtopic", facet_value: "price_per_sqm", parent: "real_estate", label_en: "Price per m²", label_ar: "السعر للمتر المربّع" },
   { facet_type: "subtopic", facet_value: "used_cars", parent: "transport", label_en: "Used cars", label_ar: "السيارات المستعملة" },
   // Macro (additional)
   { facet_type: "subtopic", facet_value: "gdp_per_capita", parent: "macro", label_en: "GDP per capita", label_ar: "نصيب الفرد من الناتج المحلي" },

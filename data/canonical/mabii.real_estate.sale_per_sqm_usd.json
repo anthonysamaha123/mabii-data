@@ -1,32 +1,15 @@
 {
-  "indicator_code": "mabii.real_estate.sale_price_median_usd",
-  "built_at": "2026-05-29T08:40:41.002Z",
+  "indicator_code": "mabii.real_estate.sale_per_sqm_usd",
+  "built_at": "2026-05-29T08:40:41.004Z",
   "observations": [
     {
-      "indicator_code": "mabii.real_estate.sale_price_median_usd",
-      "geography_id": "LBN-BA",
-      "period_start": "2026-05-25",
-      "period_end": "2026-05-31",
-      "frequency": "weekly",
-      "value": 640000,
-      "unit": "USD",
-      "source_id": "olx-lebanon",
-      "raw_ref": "fd2cd9a89c11028c05a1f516106494b3e1878f8c4526842bebf6995a8358c338",
-      "trust_label": "modeled",
-      "extraction_method": "scrape",
-      "confidence": 1,
-      "method_note": "sample_size=89 (P5–P95 trimmed)",
-      "fetched_at": "2026-05-29T08:39:48.753Z",
-      "version": 2
-    },
-    {
-      "indicator_code": "mabii.real_estate.sale_price_median_usd",
+      "indicator_code": "mabii.real_estate.sale_per_sqm_usd",
       "geography_id": "LBN-ML",
       "period_start": "2026-05-25",
       "period_end": "2026-05-31",
       "frequency": "weekly",
-      "value": 230000,
-      "unit": "USD",
+      "value": 1300,
+      "unit": "USD/m²",
       "source_id": "olx-lebanon",
       "raw_ref": "fd2cd9a89c11028c05a1f516106494b3e1878f8c4526842bebf6995a8358c338",
       "trust_label": "modeled",
@@ -34,16 +17,16 @@
       "confidence": 1,
       "method_note": "sample_size=289 (P5–P95 trimmed)",
       "fetched_at": "2026-05-29T08:39:48.753Z",
-      "version": 2
+      "version": 1
     },
     {
-      "indicator_code": "mabii.real_estate.sale_price_median_usd",
+      "indicator_code": "mabii.real_estate.sale_per_sqm_usd",
       "geography_id": "LBN-NO",
       "period_start": "2026-05-25",
       "period_end": "2026-05-31",
       "frequency": "weekly",
-      "value": 135000,
-      "unit": "USD",
+      "value": 1100,
+      "unit": "USD/m²",
       "source_id": "olx-lebanon",
       "raw_ref": "fd2cd9a89c11028c05a1f516106494b3e1878f8c4526842bebf6995a8358c338",
       "trust_label": "modeled",
@@ -51,7 +34,24 @@
       "confidence": 0.42,
       "method_note": "sample_size=21 (P5–P95 trimmed)",
       "fetched_at": "2026-05-29T08:39:48.753Z",
-      "version": 2
+      "version": 1
+    },
+    {
+      "indicator_code": "mabii.real_estate.sale_per_sqm_usd",
+      "geography_id": "LBN-BA",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 3162.8,
+      "unit": "USD/m²",
+      "source_id": "olx-lebanon",
+      "raw_ref": "fd2cd9a89c11028c05a1f516106494b3e1878f8c4526842bebf6995a8358c338",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "sample_size=89 (P5–P95 trimmed)",
+      "fetched_at": "2026-05-29T08:39:48.753Z",
+      "version": 1
     }
   ]
 }

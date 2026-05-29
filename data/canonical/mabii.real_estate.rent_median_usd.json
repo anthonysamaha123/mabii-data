@@ -1,6 +1,6 @@
 {
   "indicator_code": "mabii.real_estate.rent_median_usd",
-  "built_at": "2026-05-28T20:00:58.424Z",
+  "built_at": "2026-05-29T08:40:18.824Z",
   "observations": [
     {
       "indicator_code": "mabii.real_estate.rent_median_usd",
@@ -8,16 +8,16 @@
       "period_start": "2026-05-25",
       "period_end": "2026-05-31",
       "frequency": "weekly",
-      "value": 1100,
+      "value": 1000,
       "unit": "USD",
       "source_id": "olx-lebanon",
-      "raw_ref": "4702565b8b8b19bddc4772685718bef7b33efedb58fbcf5c06225536871a2503",
+      "raw_ref": "c4a404f39237ca168828bd1ebfa590977be183dc59b42e872a9d65cc4389ea79",
       "trust_label": "modeled",
       "extraction_method": "scrape",
       "confidence": 1,
-      "method_note": "median for LBN-ML; sample_size=248 (P5–P95 trimmed, min 3)",
-      "fetched_at": "2026-05-28T20:00:34.680Z",
-      "version": 1
+      "method_note": "sample_size=261 (P5–P95 trimmed)",
+      "fetched_at": "2026-05-29T08:39:48.753Z",
+      "version": 2
     },
     {
       "indicator_code": "mabii.real_estate.rent_median_usd",
@@ -25,16 +25,16 @@
       "period_start": "2026-05-25",
       "period_end": "2026-05-31",
       "frequency": "weekly",
-      "value": 1800,
+      "value": 1850,
       "unit": "USD",
       "source_id": "olx-lebanon",
-      "raw_ref": "4702565b8b8b19bddc4772685718bef7b33efedb58fbcf5c06225536871a2503",
+      "raw_ref": "c4a404f39237ca168828bd1ebfa590977be183dc59b42e872a9d65cc4389ea79",
       "trust_label": "modeled",
       "extraction_method": "scrape",
       "confidence": 1,
-      "method_note": "median for LBN-BA; sample_size=146 (P5–P95 trimmed, min 3)",
-      "fetched_at": "2026-05-28T20:00:34.680Z",
-      "version": 1
+      "method_note": "sample_size=162 (P5–P95 trimmed)",
+      "fetched_at": "2026-05-29T08:39:48.753Z",
+      "version": 2
     },
     {
       "indicator_code": "mabii.real_estate.rent_median_usd",

@@ -1,6 +1,6 @@
 {
   "indicator_code": "mabii.transport.used_car_median_price_usd",
-  "built_at": "2026-05-28T20:01:46.444Z",
+  "built_at": "2026-05-29T08:41:09.371Z",
   "observations": [
     {
       "indicator_code": "mabii.transport.used_car_median_price_usd",
@@ -8,16 +8,16 @@
       "period_start": "2026-05-25",
       "period_end": "2026-05-31",
       "frequency": "weekly",
-      "value": 16700,
+      "value": 17800,
       "unit": "USD",
       "source_id": "olx-lebanon",
-      "raw_ref": "994767fc916e30cf9fdbad3505f13e0133bf323758331933669661f2ebd9c82b",
+      "raw_ref": "83c68690d380f1cc434c0a026b79338a2d42e3eecaf7017a0e7b3cd2bf8dfb34",
       "trust_label": "modeled",
       "extraction_method": "scrape",
       "confidence": 1,
-      "method_note": "national median; sample_size=459 (P5–P95 trimmed)",
-      "fetched_at": "2026-05-28T20:00:34.680Z",
-      "version": 1
+      "method_note": "sample_size=487 (P5–P95 trimmed)",
+      "fetched_at": "2026-05-29T08:39:48.753Z",
+      "version": 2
     }
   ]
 }

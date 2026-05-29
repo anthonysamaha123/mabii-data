@@ -1,0 +1,229 @@
+{
+  "built_at": "2026-05-29T08:41:09.372Z",
+  "rows": [
+    {
+      "make": "Audi",
+      "year": 2013,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 13000,
+      "n": 4
+    },
+    {
+      "make": "Audi",
+      "year": 2017,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 25000,
+      "n": 4
+    },
+    {
+      "make": "Hyundai",
+      "year": 2019,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 16725,
+      "n": 6
+    },
+    {
+      "make": "Jaguar",
+      "year": 2017,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 22800,
+      "n": 4
+    },
+    {
+      "make": "Jeep",
+      "year": 2018,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 21800,
+      "n": 7
+    },
+    {
+      "make": "Jeep",
+      "year": 2019,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 20800,
+      "n": 4
+    },
+    {
+      "make": "Kia",
+      "year": 2020,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 19500,
+      "n": 5
+    },
+    {
+      "make": "Land Rover",
+      "year": 2010,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 13000,
+      "n": 4
+    },
+    {
+      "make": "Land Rover",
+      "year": 2016,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 30000,
+      "n": 7
+    },
+    {
+      "make": "Land Rover",
+      "year": 2017,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 25999,
+      "n": 5
+    },
+    {
+      "make": "Land Rover",
+      "year": 2018,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 36200,
+      "n": 19
+    },
+    {
+      "make": "Land Rover",
+      "year": 2019,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 36000,
+      "n": 5
+    },
+    {
+      "make": "Mercedes",
+      "year": 2008,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 9700,
+      "n": 4
+    },
+    {
+      "make": "Mercedes",
+      "year": 2012,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 11500,
+      "n": 5
+    },
+    {
+      "make": "Mercedes",
+      "year": 2015,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 17900,
+      "n": 7
+    },
+    {
+      "make": "Mercedes",
+      "year": 2017,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 22850,
+      "n": 18
+    },
+    {
+      "make": "Mercedes",
+      "year": 2018,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 24500,
+      "n": 24
+    },
+    {
+      "make": "Mercedes",
+      "year": 2019,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 26750,
+      "n": 12
+    },
+    {
+      "make": "Mercedes",
+      "year": 2020,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 33999,
+      "n": 4
+    },
+    {
+      "make": "Mini",
+      "year": 2018,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 21800,
+      "n": 4
+    },
+    {
+      "make": "Mini",
+      "year": 2020,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 26000,
+      "n": 7
+    },
+    {
+      "make": "Nissan",
+      "year": 2014,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 7500,
+      "n": 4
+    },
+    {
+      "make": "Nissan",
+      "year": 2018,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 13650,
+      "n": 8
+    },
+    {
+      "make": "Porsche",
+      "year": 2011,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 22500,
+      "n": 4
+    },
+    {
+      "make": "Porsche",
+      "year": 2017,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 35900,
+      "n": 4
+    },
+    {
+      "make": "Porsche",
+      "year": 2019,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 61000,
+      "n": 4
+    },
+    {
+      "make": "Toyota",
+      "year": 2008,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 20500,
+      "n": 4
+    },
+    {
+      "make": "Toyota",
+      "year": 2016,
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "median_usd": 29500,
+      "n": 4
+    }
+  ]
+}

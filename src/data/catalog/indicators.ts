@@ -2424,6 +2424,68 @@ export const indicators: Indicator[] = [
   },
 
   {
+    code: "mabii.real_estate.rent_per_sqm_usd",
+    name_en: "Residential rent — median per m² (USD/m²/month)",
+    name_ar: "الإيجار السكني — الوسيط للمتر المربّع (دولار/م²/شهر)",
+    definition_en:
+      "Median monthly asking rent per square metre, by governorate — listing rent divided by listing area, then medianed. Normalises for unit size so a studio and a villa are comparable. Outlier-trimmed (P5–P95). Asking prices, fresh-USD online market.",
+    definition_ar:
+      "الوسيط الشهري للإيجار المطلوب لكل متر مربّع، حسب المحافظة — الإيجار مقسوماً على المساحة ثم الوسيط. يوحّد لحجم الوحدة لتغدو الاستوديو والفيلا قابلتين للمقارنة. مُشذَّب من القيم الشاذّة. أسعار مطلوبة في سوق الدولار الفريش.",
+    default_unit: "USD/m²",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "real_estate" },
+      { facet_type: "subtopic", facet_value: "price_per_sqm" },
+      { facet_type: "frequency", facet_value: "weekly" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "governorate" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "olx-lebanon",
+        source_native_code: "listings.properties.rent_per_sqm",
+        comparability: "direct",
+        reconciliation_notes:
+          "median(rent ÷ area) per governorate from listing cards where both price and area parse. Outlier-trimmed P5–P95. Sample size on every value.",
+        schedule: { cadence: "weekly", grace_days: 4 },
+      },
+    ],
+    notes_en: "More comparable across regions than the absolute median rent. Trust 'modeled'.",
+    notes_ar: "أكثر قابلية للمقارنة بين المناطق من الوسيط المطلق للإيجار. تصنيف ‘نموذجي’.",
+  },
+  {
+    code: "mabii.real_estate.sale_per_sqm_usd",
+    name_en: "Apartment sale — median per m² (USD/m²)",
+    name_ar: "بيع الشقق — الوسيط للمتر المربّع (دولار/م²)",
+    definition_en:
+      "Median asking sale price per square metre, by governorate — listing price divided by listing area, then medianed. The standard real-estate comparator. Outlier-trimmed (P5–P95). Asking prices.",
+    definition_ar:
+      "الوسيط لسعر البيع المطلوب لكل متر مربّع، حسب المحافظة — السعر مقسوماً على المساحة ثم الوسيط. المقياس العقاري المعياري. مُشذَّب من القيم الشاذّة. أسعار مطلوبة.",
+    default_unit: "USD/m²",
+    geography_id: "LBN",
+    facets: [
+      { facet_type: "topic", facet_value: "real_estate" },
+      { facet_type: "subtopic", facet_value: "price_per_sqm" },
+      { facet_type: "frequency", facet_value: "weekly" },
+      { facet_type: "currency_basis", facet_value: "usd" },
+      { facet_type: "geography_level", facet_value: "governorate" },
+      { facet_type: "stock_or_flow", facet_value: "flow" },
+    ],
+    sources: [
+      {
+        source_id: "olx-lebanon",
+        source_native_code: "listings.properties.sale_per_sqm",
+        comparability: "direct",
+        reconciliation_notes:
+          "median(price ÷ area) per governorate from listing cards. Outlier-trimmed P5–P95.",
+        schedule: { cadence: "weekly", grace_days: 4 },
+      },
+    ],
+    notes_en: "The standard way real estate is compared. Trust 'modeled'.",
+    notes_ar: "الطريقة المعيارية لمقارنة العقارات. تصنيف ‘نموذجي’.",
+  },
+  {
     code: "mabii.real_estate.rent_median_usd",
     name_en: "Residential rent — median asking price (USD/month)",
     name_ar: "الإيجار السكني — وسيط السعر المطلوب (دولار/شهر)",

@@ -1,0 +1,40 @@
+{
+  "indicator_code": "mabii.real_estate.rent_per_sqm_usd",
+  "built_at": "2026-05-29T08:40:18.833Z",
+  "observations": [
+    {
+      "indicator_code": "mabii.real_estate.rent_per_sqm_usd",
+      "geography_id": "LBN-ML",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 5.6,
+      "unit": "USD/m²",
+      "source_id": "olx-lebanon",
+      "raw_ref": "c4a404f39237ca168828bd1ebfa590977be183dc59b42e872a9d65cc4389ea79",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "sample_size=259 (P5–P95 trimmed)",
+      "fetched_at": "2026-05-29T08:39:48.753Z",
+      "version": 1
+    },
+    {
+      "indicator_code": "mabii.real_estate.rent_per_sqm_usd",
+      "geography_id": "LBN-BA",
+      "period_start": "2026-05-25",
+      "period_end": "2026-05-31",
+      "frequency": "weekly",
+      "value": 10.6,
+      "unit": "USD/m²",
+      "source_id": "olx-lebanon",
+      "raw_ref": "c4a404f39237ca168828bd1ebfa590977be183dc59b42e872a9d65cc4389ea79",
+      "trust_label": "modeled",
+      "extraction_method": "scrape",
+      "confidence": 1,
+      "method_note": "sample_size=161 (P5–P95 trimmed)",
+      "fetched_at": "2026-05-29T08:39:48.753Z",
+      "version": 1
+    }
+  ]
+}
