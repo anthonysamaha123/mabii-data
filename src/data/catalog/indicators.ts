@@ -1066,7 +1066,9 @@ export const indicators: Indicator[] = [
     ],
     sources: [
       { source_id: "who-gho", source_native_code: "MDG_0000000001", comparability: "direct", schedule: whoAnnualSchedule },
+      { source_id: "world-bank-data360", source_native_code: "WB_HNP:WB_HNP_SP_DYN_IMRT_IN", comparability: "direct", schedule: wbAnnualSchedule },
     ],
+    primary_source_id: "world-bank-data360",
   },
   {
     code: "mabii.health.adult_mortality",
@@ -2275,20 +2277,6 @@ export const indicators: Indicator[] = [
       { facet_type: "geography_level", facet_value: "country" },
     ],
     sources: [{ source_id: "world-bank-data360", source_native_code: "WB_WDI:WB_WDI_NE_GDI_TOTL_ZS", comparability: "direct", schedule: wbAnnualSchedule }],
-  },
-  {
-    code: "mabii.health.infant_mortality",
-    name_en: "Infant mortality rate (per 1,000 live births)",
-    name_ar: "معدّل وفيات الرضّع (لكل 1000 ولادة حيّة)",
-    definition_en: "Deaths of infants under one year per 1,000 live births.",
-    definition_ar: "وفيات الرضّع دون السنة لكل 1000 ولادة حيّة.",
-    default_unit: "per 1,000", geography_id: "LBN",
-    facets: [
-      { facet_type: "topic", facet_value: "health" }, { facet_type: "subtopic", facet_value: "mortality" },
-      { facet_type: "frequency", facet_value: "annual" }, { facet_type: "currency_basis", facet_value: "count" },
-      { facet_type: "geography_level", facet_value: "country" },
-    ],
-    sources: [{ source_id: "world-bank-data360", source_native_code: "WB_HNP:WB_HNP_SP_DYN_IMRT_IN", comparability: "direct", schedule: wbAnnualSchedule }],
   },
   {
     code: "mabii.health.maternal_mortality",
